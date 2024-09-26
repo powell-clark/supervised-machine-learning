@@ -28,7 +28,7 @@ To set up this project locally, follow these steps:
     pip install -r requirements.txt
     ```
 
-4. Read the lessons and run scripts interface:
+4. Read the lessons and run the model scripts:
     ```bash
     python3 scripts/logistic_regression.py
     ```
