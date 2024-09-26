@@ -2,7 +2,7 @@
 
 ## Project Overview
 
-This project demonstrates a comparative analysis of various supervised learning algorithms applied to the Wisconsin Breast Cancer dataset. It includes detailed lessons, scripts for each model, and a web-based interface where users can visualize data, compare model results, and run models interactively.
+This project demonstrates a comparative analysis of various supervised learning algorithms applied to the Wisconsin Breast Cancer dataset. It includes detailed lessons and scripts to run each model.
 
 ## Repository Structure
 - `lessons_and_theory/`: Contains markdown files explaining the theory behind each algorithm.
