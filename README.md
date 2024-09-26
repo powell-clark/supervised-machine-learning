@@ -7,8 +7,7 @@ This project demonstrates a comparative analysis of various supervised learning 
 ## Repository Structure
 - `lessons_and_theory/`: Contains markdown files explaining the theory behind each algorithm.
 - `scripts/`: Contains Python scripts for each machine learning model.
-- `web_interface/`: Flask app to host the web interface where users can run models and visualize results.
-- `tests/`: Contains unit tests for the project.
+
 
 ## Installation
 To set up this project locally, follow these steps:
