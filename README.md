@@ -8,27 +8,27 @@ This repository teaches machine learning from first principles using Python. Sta
 
 ### 1a_logistic_regression_theory.ipynb  
 Theory & from-scratch implementation of logistic regression using the Wisconsin Breast Cancer dataset.
-* [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/powell-clark/supervised-machine-learning/blob/main/1a_logistic_regression_theory.ipynb)
+* [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/powell-clark/supervised-machine-learning/blob/main/notebooks/1a_logistic_regression_theory.ipynb)
 * [View Source](notebooks/1a_logistic_regression_theory.ipynb)
 
 ### 1b_logistic_regression_practical.ipynb
 Production-grade PyTorch implementation with modern ML engineering practices.
-* [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/powell-clark/supervised-machine-learning/blob/main/1b_logistic_regression_practical.ipynb)
+* [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/powell-clark/supervised-machine-learning/blob/main/notebooks/1b_logistic_regression_practical.ipynb)
 * [View Source](notebooks/1b_logistic_regression_practical.ipynb)
 
 ### 2a_decision_trees_theory.ipynb
 Deep dive into decision tree theory with a complete from-scratch implementation.
-* [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/powell-clark/supervised-machine-learning/blob/main/2a_decision_trees_theory.ipynb)
+* [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/powell-clark/supervised-machine-learning/blob/main/notebooks/2a_decision_trees_theory.ipynb)
 * [View Source](notebooks/2a_decision_trees_theory.ipynb)
 
 ### 2b_decision_trees_practical.ipynb
 Real-world application building a London housing market price predictor.
-* [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/powell-clark/supervised-machine-learning/blob/main/2b_decision_trees_practical.ipynb)
+* [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/powell-clark/supervised-machine-learning/blob/main/notebooks/2b_decision_trees_practical.ipynb)
 * [View Source](notebooks/2b_decision_trees_practical.ipynb)
 
 ### 2c_decision_trees_ATLAS.ipynb
 Automated Tree Learning Analysis System (ATLAS) for feature engineering and model comparison.
-* [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/powell-clark/supervised-machine-learning/blob/main/2c_decision_trees_ATLAS.ipynb)
+* [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/powell-clark/supervised-machine-learning/blob/main/notebooks/2c_decision_trees_ATLAS.ipynb)
 * [View Source](notebooks/2c_decision_trees_ATLAS.ipynb)
 
 
