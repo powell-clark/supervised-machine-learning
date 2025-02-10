@@ -1,56 +1,46 @@
-# Supervised Machine Learning
+# 🎓 Supervised Machine Learning
 
-## Overview
-This repository demonstrates modern approaches to supervised learning, focusing on practical implementation and production-ready code. It's part of a broader machine learning education series, with companion repositories for unsupervised learning and reinforcement learning (coming soon).
+This repository teaches machine learning from first principles using Python. Starting with foundational mathematics (derivatives, exp/log, probability), each notebook builds complete understanding before exploring modern tools like scikit-learn and PyTorch. All mathematical concepts are derived step-by-step, making the content accessible to anyone with basic calculus knowledge. Part of a broader machine learning series, with companion repositories for unsupervised, reinforcement and other types of learning in development.
 
-## Key Features
-- Production-grade implementation of ML algorithms
-- Modern PyTorch-based development
-- Comprehensive evaluation frameworks
-- Real-world datasets
-- Industry-standard practices
+## 📚 Notebooks
 
-## Lessons
-Each lesson combines theory with practical implementation:
+### **1a_logistic_regression_theory.ipynb**  
+Theory & from-scratch implementation of logistic regression using the Wisconsin Breast Cancer dataset.
+* [View Source](notebooks/1a_logistic_regression_theory.ipynb)
 
-### 1. Logistic Regression
-- [Binary Classification Tutorial](notebooks/1_logistic_regression.ipynb)
-  - PyTorch implementation
-  - Model evaluation
-  - Medical diagnosis case study
+### **1b_logistic_regression_practical.ipynb**
+Production-grade PyTorch implementation with modern ML engineering practices.
+* [View Source](notebooks/1b_logistic_regression_practical.ipynb)
 
-### 2. Decision Trees & Ensemble Methods
-- [Theory and Foundations](notebooks/2a_decision_trees_theory.ipynb)
-- [Practical Implementation](notebooks/2b_decision_trees_practical.ipynb)
-  - Feature engineering
-  - Model comparison pipeline
-  - Random Forests and XGBoost
+### **2a_decision_trees_theory.ipynb**
+Deep dive into decision tree theory with a complete from-scratch implementation.
+* [View Source](notebooks/2a_decision_trees_theory.ipynb)
 
-### 3. Neural Networks
-- [Deep Learning Basics](notebooks/3_neural_networks.ipynb) (In Progress)
-  - PyTorch implementation
-  - Modern architectures
-  - Practical considerations
+### **2b_decision_trees_practical.ipynb**
+Real-world application building a London housing market price predictor.
+* [View Source](notebooks/2b_decision_trees_practical.ipynb)
 
-### Coming Soon
-- Advanced ensemble methods
-- Deep learning extensions
-- Production deployment guides
+### **2c_decision_trees_ATLAS.ipynb**
+Automated Tree Learning Analysis System (ATLAS) for feature engineering and model comparison.
+* [View Source](notebooks/2c_decision_trees_ATLAS.ipynb)
 
-## Datasets
-### [Wisconsin Breast Cancer - 1995](https://archive.ics.uci.edu/dataset/17/breast+cancer+wisconsin+diagnostic)
-- 569 samples, 30 features
-- Binary classification
-- Feature importance analysis
-- Medical diagnosis considerations
+### 🧠 Neural Networks (Coming Soon)
+Implementation of neural networks and deep learning fundamentals.
 
-### [Housing prices in London - 2020](https://www.kaggle.com/datasets/arnavkulkarni/housing-prices-in-london) 
-- 3479 samples, 9 features
-- Real estate price prediction
-- Geographic feature encoding
-- Missing data handling
+## 📊 Datasets
 
-## Installation
+### [Wisconsin Breast Cancer (1995)](https://archive.ics.uci.edu/dataset/17/breast+cancer+wisconsin+diagnostic)
+* Binary classification task
+* 569 samples × 30 features
+* Medical diagnosis application
+
+### [London Housing Prices (2020)](https://www.kaggle.com/datasets/arnavkulkarni/housing-prices-in-london)
+* Regression problem
+* 3,479 samples × 9 features
+* Geographic feature encoding
+
+## 💻 Local Setup
+For those who prefer to run notebooks locally:
 ```bash
 git clone https://github.com/powell-clark/supervised-machine-learning.git
 cd supervised-machine-learning
@@ -58,10 +48,5 @@ python3 -m venv venv
 source venv/bin/activate
 pip install -r requirements.txt
 ```
-
-## Companion Projects
-- [Unsupervised Learning Showcase](https://github.com/powell-clark/unnsupervised-machine-learning) (Coming Soon)
-- [Reinforcement Learning Showcase](https://github.com/powell-clark/reinforcement-machine-learning) (Coming Soon)
-
-## Contributing
-We welcome contributions! See CONTRIBUTING.md for guidelines.
+---
+© 2025 Powell-Clark Limited
