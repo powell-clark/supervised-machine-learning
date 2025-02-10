@@ -1,0 +1,143 @@
+{
+  "timestamp": "2024-12-10T09:39:13.747750",
+  "monitoring_period": {
+    "start": "2024-12-10 09:28:17.884988",
+    "end": "2024-12-10 09:39:13.745777"
+  },
+  "prediction_volume": 283,
+  "health_check": {
+    "healthy": false,
+    "checks": {
+      "performance": {
+        "healthy": "True",
+        "metric": "mae_increase",
+        "value": -0.8424905890541379,
+        "threshold": 0.15
+      },
+      "features": {
+        "healthy": false,
+        "error": "'str' object has no attribute 'keys'"
+      },
+      "market": {
+        "healthy": true,
+        "metrics": {
+          "global": {
+            "change": 0.0,
+            "volatile": "False"
+          },
+          "areas": {
+            "SW3": {
+              "change": 0.0006428943043574886,
+              "volatile": "False"
+            },
+            "CR0": {
+              "change": 0.006324954903840885,
+              "volatile": "False"
+            },
+            "E8": {
+              "change": 0.000167422825015473,
+              "volatile": "False"
+            }
+          }
+        }
+      },
+      "quality": {
+        "healthy": true,
+        "failed_checks": []
+      }
+    },
+    "timestamp": "2024-12-10T09:39:13.758031"
+  },
+  "performance_metrics": {
+    "mae": 64912.05523375632,
+    "rmse": 88958.92584334941,
+    "r2": 0.9407857894776867,
+    "price_bands": {
+      "(345527.867, 375812.285]": {
+        "mae": 23477.762096876148,
+        "count": 57
+      },
+      "(375812.285, 726292.597]": {
+        "mae": 30855.605970209777,
+        "count": 56
+      },
+      "(726292.597, 772598.353]": {
+        "mae": 68600.9724147363,
+        "count": 57
+      },
+      "(772598.353, 1251876.658]": {
+        "mae": 83283.68922009153,
+        "count": 56
+      },
+      "(1251876.658, 1383996.506]": {
+        "mae": 118067.0742690221,
+        "count": 57
+      }
+    }
+  },
+  "data_quality_metrics": {
+    "missing_values": {
+      "timestamp": 0.0,
+      "predicted_price": 0.0,
+      "actual_price": 0.0,
+      "Area in sq ft": 0.0,
+      "No. of Bedrooms": 0.0,
+      "House Type": 0.0,
+      "Outcode": 0.0,
+      "City/County": 0.0,
+      "price_band": 0.0
+    },
+    "value_ranges": {
+      "predicted_price": {
+        "min": 310109.90824892005,
+        "max": 1525386.998325176,
+        "mean": 792826.2849449841,
+        "std": 362987.3748976222
+      },
+      "actual_price": {
+        "min": 345527.8675789904,
+        "max": 1383996.505582833,
+        "mean": 795116.3630099727,
+        "std": 366222.6679631804
+      },
+      "Area in sq ft": {
+        "min": 900.0,
+        "max": 1500.0,
+        "mean": 1167.844522968198,
+        "std": 250.22957656799747
+      },
+      "No. of Bedrooms": {
+        "min": "2",
+        "max": "3",
+        "mean": 2.335689045936396,
+        "std": 0.4730673284966216
+      }
+    },
+    "outliers": {
+      "Area in sq ft": 0,
+      "No. of Bedrooms": 0
+    }
+  },
+  "market_indicators": {
+    "price_per_sqft": {
+      "mean": 645.290479552532,
+      "median": 679.7154079250699,
+      "std": 177.7530372596975
+    },
+    "area_SW3": {
+      "volume": 95,
+      "mean_price_per_sqft": 840.0403271283466,
+      "price_movement": 0.0006428943043574886
+    },
+    "area_CR0": {
+      "volume": 94,
+      "mean_price_per_sqft": 413.9642544552179,
+      "price_movement": 0.006324954903840885
+    },
+    "area_E8": {
+      "volume": 94,
+      "mean_price_per_sqft": 679.7950501849267,
+      "price_movement": 0.000167422825015473
+    }
+  }
+}

@@ -1,0 +1,53 @@
+{
+    "model_version": "1.0",
+    "model_type": "XGBRegressor",
+    "training_date": "2024-11-14",
+    "model_params": {
+        "objective": "reg:squarederror",
+        "base_score": 0.5,
+        "booster": "gbtree",
+        "callbacks": null,
+        "colsample_bylevel": 1,
+        "colsample_bynode": 1,
+        "colsample_bytree": 1,
+        "early_stopping_rounds": null,
+        "enable_categorical": false,
+        "eval_metric": null,
+        "gamma": 0,
+        "gpu_id": -1,
+        "grow_policy": "depthwise",
+        "importance_type": null,
+        "interaction_constraints": "",
+        "learning_rate": 0.1,
+        "max_bin": 256,
+        "max_cat_to_onehot": 4,
+        "max_delta_step": 0,
+        "max_depth": 6,
+        "max_leaves": 0,
+        "min_child_weight": 1,
+        "missing": NaN,
+        "monotone_constraints": "()",
+        "n_estimators": 100,
+        "n_jobs": -1,
+        "num_parallel_tree": 1,
+        "predictor": "auto",
+        "random_state": 42,
+        "reg_alpha": 0,
+        "reg_lambda": 1,
+        "sampling_method": "uniform",
+        "scale_pos_weight": 1,
+        "subsample": 1,
+        "tree_method": "exact",
+        "validate_parameters": 1,
+        "verbosity": null
+    },
+    "performance": {
+        "mae": 472931.22,
+        "rmse": 1301992.45,
+        "r2": 0.7548
+    },
+    "library_versions": {
+        "xgboost": "1.6.2",
+        "sklearn": "1.0.2"
+    }
+}

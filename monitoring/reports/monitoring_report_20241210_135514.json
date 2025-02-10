@@ -1,0 +1,160 @@
+{
+  "timestamp": "2024-12-10T13:55:14.892062",
+  "monitoring_period": {
+    "start": "2024-12-10T09:28:17.884988",
+    "end": "2024-12-10T13:55:14.889806"
+  },
+  "prediction_volume": 1283,
+  "health_check": {
+    "healthy": true,
+    "checks": {
+      "performance": {
+        "healthy": true,
+        "metric": "mae_increase",
+        "value": -0.8402854403537718,
+        "threshold": 0.15
+      },
+      "features": {
+        "healthy": true,
+        "drift_metrics": {
+          "Area in sq ft": {
+            "drift": 0.0017387133521195085,
+            "significant": false
+          },
+          "No. of Bedrooms": {
+            "drift": 0.0017387133521192916,
+            "significant": false
+          },
+          "House Type": {
+            "drift": 0.0,
+            "significant": false
+          },
+          "Outcode": {
+            "drift": 0.0,
+            "significant": false
+          }
+        }
+      },
+      "market": {
+        "healthy": true,
+        "metrics": {
+          "global": {
+            "change": 0.0,
+            "volatile": false
+          },
+          "areas": {
+            "SW3": {
+              "change": 0.0001158279064060741,
+              "volatile": false
+            },
+            "CR0": {
+              "change": 0.004570016857260661,
+              "volatile": false
+            },
+            "E8": {
+              "change": 0.0008977959130791469,
+              "volatile": false
+            }
+          }
+        }
+      },
+      "quality": {
+        "healthy": true,
+        "failed_checks": []
+      }
+    },
+    "timestamp": "2024-12-10T13:55:14.898111"
+  },
+  "performance_metrics": {
+    "mae": 65820.83099119984,
+    "rmse": 90340.16207854789,
+    "r2": 0.9388631372799986,
+    "price_bands": {
+      "(345527.867, 375146.271]": {
+        "mae": 24289.692634115534,
+        "count": 266
+      },
+      "(375146.271, 726502.401]": {
+        "mae": 28821.629054634726,
+        "count": 251
+      },
+      "(726502.401, 772598.353]": {
+        "mae": 72524.59747193368,
+        "count": 253
+      },
+      "(772598.353, 1253638.045]": {
+        "mae": 87026.34313076537,
+        "count": 264
+      },
+      "(1253638.045, 1383996.506]": {
+        "mae": 118189.4027365464,
+        "count": 249
+      }
+    }
+  },
+  "data_quality_metrics": {
+    "missing_values": {
+      "timestamp": 0.0,
+      "predicted_price": 0.0,
+      "actual_price": 0.0,
+      "Area in sq ft": 0.0,
+      "No. of Bedrooms": 0.0,
+      "House Type": 0.0,
+      "Outcode": 0.0,
+      "City/County": 0.0,
+      "price_band": 0.0
+    },
+    "value_ranges": {
+      "predicted_price": {
+        "min": 310109.90824892005,
+        "max": 1525386.998325176,
+        "mean": 793373.5183840543,
+        "std": 362837.2544244901
+      },
+      "actual_price": {
+        "min": 345527.8675789904,
+        "max": 1383996.505582833,
+        "mean": 794930.616406642,
+        "std": 365509.4472523416
+      },
+      "Area in sq ft": {
+        "min": 900.0,
+        "max": 1500.0,
+        "mean": 1167.9657053780202,
+        "std": 249.91947297625183
+      },
+      "No. of Bedrooms": {
+        "min": 2,
+        "max": 3,
+        "mean": 2.3359314107560407,
+        "std": 0.4724992153986886
+      }
+    },
+    "outliers": {
+      "Area in sq ft": 0,
+      "No. of Bedrooms": 0
+    }
+  },
+  "market_indicators": {
+    "price_per_sqft": {
+      "mean": 645.0726886722596,
+      "median": 679.7154079250699,
+      "std": 177.55111814243153
+    },
+    "area_SW3": {
+      "volume": 431,
+      "mean_price_per_sqft": 839.4033793643069,
+      "price_movement": -0.0001158279064060741
+    },
+    "area_CR0": {
+      "volume": 426,
+      "mean_price_per_sqft": 413.24233891836514,
+      "price_movement": 0.004570016857260661
+    },
+    "area_E8": {
+      "volume": 426,
+      "mean_price_per_sqft": 680.2914710827915,
+      "price_movement": 0.0008977959130791469
+    }
+  }
+}

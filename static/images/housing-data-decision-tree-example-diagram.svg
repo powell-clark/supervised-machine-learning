@@ -1,0 +1,83 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 650">
+  <style>
+    .node-rect { fill: #6C9CE8; stroke: #4A87D7; stroke-width: 2px; }
+    .leaf-rect { fill: #B5DCA9; stroke: #8CC685; stroke-width: 2px; }
+    .node-text { font-size: 14px; font-family: Arial, sans-serif; fill: white; }
+    .leaf-text { font-size: 14px; font-family: Arial, sans-serif; fill: #333; }
+    .edge { fill: none; stroke: #555; stroke-width: 2px; }
+    .edge-text { font-size: 12px; font-family: Arial, sans-serif; fill: #555; }
+    .label-text { font-size: 16px; font-family: Arial, sans-serif; fill: #FF6B6B; font-weight: bold; }
+  </style>
+
+  <!-- Nodes -->
+  <rect class="node-rect" x="350" y="50" width="240" height="60" rx="10" ry="10"/>
+  <text class="node-text" x="470" y="85" text-anchor="middle">Area ≥ 2000 sq ft?</text>
+  <text class="label-text" x="470" y="40" text-anchor="middle">Root Node</text>
+
+  <rect class="node-rect" x="100" y="170" width="240" height="60" rx="10" ry="10"/>
+  <text class="node-text" x="220" y="205" text-anchor="middle">Location = Hackney?</text>
+  <text class="label-text" x="100" y="160" text-anchor="start">Internal Node</text>
+
+  <rect class="node-rect" x="600" y="170" width="240" height="60" rx="10" ry="10"/>
+  <text class="node-text" x="720" y="205" text-anchor="middle">House Type = House?</text>
+  <text class="label-text" x="840" y="160" text-anchor="end">Internal Node</text>
+
+  <rect class="leaf-rect" x="20" y="290" width="160" height="60" rx="10" ry="10"/>
+  <text class="leaf-text" x="100" y="325" text-anchor="middle">Price: £450,000</text>
+  <text class="label-text" x="20" y="370" text-anchor="start">Leaf Node</text>
+
+  <rect class="node-rect" x="220" y="290" width="240" height="60" rx="10" ry="10"/>
+  <text class="node-text" x="340" y="325" text-anchor="middle">No. of Bedrooms ≥ 3?</text>
+  <text class="label-text" x="460" y="280" text-anchor="end">Internal Node</text>
+
+  <rect class="leaf-rect" x="520" y="290" width="160" height="60" rx="10" ry="10"/>
+  <text class="leaf-text" x="600" y="325" text-anchor="middle">Price: £1,200,000</text>
+  <text class="label-text" x="520" y="280" text-anchor="start">Leaf Node</text>
+
+  <rect class="node-rect" x="720" y="290" width="240" height="60" rx="10" ry="10"/>
+  <text class="node-text" x="840" y="325" text-anchor="middle">Postcode Outcode = W?</text>
+  <text class="label-text" x="960" y="280" text-anchor="end">Internal Node</text>
+
+  <rect class="leaf-rect" x="140" y="410" width="160" height="60" rx="10" ry="10"/>
+  <text class="leaf-text" x="220" y="445" text-anchor="middle">Price: £650,000</text>
+  <text class="label-text" x="140" y="490" text-anchor="start">Leaf Node</text>
+
+  <rect class="leaf-rect" x="340" y="410" width="160" height="60" rx="10" ry="10"/>
+  <text class="leaf-text" x="420" y="445" text-anchor="middle">Price: £950,000</text>
+  <text class="label-text" x="340" y="490" text-anchor="start">Leaf Node</text>
+
+  <rect class="leaf-rect" x="640" y="410" width="160" height="60" rx="10" ry="10"/>
+  <text class="leaf-text" x="720" y="445" text-anchor="middle">Price: £1,500,000</text>
+  <text class="label-text" x="640" y="490" text-anchor="start">Leaf Node</text>
+
+  <rect class="leaf-rect" x="840" y="410" width="160" height="60" rx="10" ry="10"/>
+  <text class="leaf-text" x="920" y="445" text-anchor="middle">Price: £2,000,000</text>
+  <text class="label-text" x="840" y="490" text-anchor="start">Leaf Node</text>
+
+  <!-- Edges -->
+  <path class="edge" d="M470,110 L220,170"/>
+  <text class="edge-text" x="300" y="140" text-anchor="middle">No</text>
+  <path class="edge" d="M470,110 L720,170"/>
+  <text class="edge-text" x="640" y="140" text-anchor="middle">Yes</text>
+
+  <path class="edge" d="M220,230 L100,290"/>
+  <text class="edge-text" x="140" y="260" text-anchor="middle">No</text>
+  <path class="edge" d="M220,230 L340,290"/>
+  <text class="edge-text" x="300" y="260" text-anchor="middle">Yes</text>
+  
+  <path class="edge" d="M720,230 L600,290"/>
+  <text class="edge-text" x="640" y="260" text-anchor="middle">No</text>
+  <path class="edge" d="M720,230 L840,290"/>
+  <text class="edge-text" x="800" y="260" text-anchor="middle">Yes</text>
+
+  <path class="edge" d="M340,350 L220,410"/>
+  <text class="edge-text" x="260" y="380" text-anchor="middle">No</text>
+  <path class="edge" d="M340,350 L420,410"/>
+  <text class="edge-text" x="400" y="380" text-anchor="middle">Yes</text>
+
+  <path class="edge" d="M840,350 L720,410"/>
+  <text class="edge-text" x="760" y="380" text-anchor="middle">No</text>  
+  <path class="edge" d="M840,350 L920,410"/>
+  <text class="edge-text" x="900" y="380" text-anchor="middle">Yes</text>
+
+</svg>

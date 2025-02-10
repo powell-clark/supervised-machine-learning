@@ -36,13 +36,156 @@ Here, `e` is a mathematical constant approximately equal to 2.71828.
 The sigmoid function squashes `z` into a value between 0 and 1, which we can interpret as the probability of the outcome being "yes".
 
 ![Sigmoid Curve](../static/sigmoid-curve.png)
+
 *The sigmoid function squashes input values to a probability between 0 and 1.*
 
 ### Step 3: Making a Prediction
 To make a final prediction, we set a threshold (usually 0.5). If the probability is greater than the threshold, we predict "yes", otherwise we predict "no".
 
 ![Decision Boundary](../static/sigmoid-curve-decision-boundary.png)
+
 *The decision boundary separates the two classes based on the model's predictions.*
+
+# Logistic Regression: Key Concepts Visualization
+```
+import numpy as np
+import matplotlib.pyplot as plt
+from mpl_toolkits.mplot3d import Axes3D
+from sklearn.linear_model import LogisticRegression
+
+# Sigmoid function visualization
+def plot_sigmoid():
+    def sigmoid(x):
+        return 1 / (1 + np.exp(-x))
+
+    x = np.linspace(-10, 10, 1000)
+    y = sigmoid(x)
+
+    plt.figure(figsize=(12, 6))
+    plt.plot(x, y, label='Sigmoid Function')
+    plt.axvline(x=0, color='r', linestyle='--', label='Decision Boundary')
+    plt.axhline(y=0.5, color='g', linestyle=':', label='0.5 Threshold')
+    plt.title('Sigmoid Function and Decision Boundary')
+    plt.xlabel('Combined Input (w1*x1 + w2*x2 + ... + b)')
+    plt.ylabel('Probability of Positive Class')
+    plt.legend()
+    plt.grid(True)
+    plt.show()
+
+# 2D visualization
+def plot_2d_decision_boundary():
+    np.random.seed(0)
+    X = np.random.randn(200, 2)
+    y = (X[:, 0] + X[:, 1] > 0).astype(int)
+
+    clf = LogisticRegression()
+    clf.fit(X, y)
+
+    plt.figure(figsize=(10, 8))
+    plt.scatter(X[y==0][:, 0], X[y==0][:, 1], label='Class 0')
+    plt.scatter(X[y==1][:, 0], X[y==1][:, 1], label='Class 1')
+
+    x1_min, x1_max = X[:, 0].min() - 1, X[:, 0].max() + 1
+    x2_min, x2_max = X[:, 1].min() - 1, X[:, 1].max() + 1
+    xx1, xx2 = np.meshgrid(np.arange(x1_min, x1_max, 0.02),
+                           np.arange(x2_min, x2_max, 0.02))
+    Z = clf.predict(np.c_[xx1.ravel(), xx2.ravel()])
+    Z = Z.reshape(xx1.shape)
+
+    plt.contourf(xx1, xx2, Z, alpha=0.3)
+    plt.xlabel('Feature 1')
+    plt.ylabel('Feature 2')
+    plt.title('2D Dataset with Decision Boundary')
+    plt.legend()
+    plt.show()
+
+# 3D visualization
+def plot_3d_decision_boundary():
+    np.random.seed(0)
+    X = np.random.randn(200, 3)
+    y = (X[:, 0] + X[:, 1] + X[:, 2] > 0).astype(int)
+
+    clf = LogisticRegression()
+    clf.fit(X, y)
+
+    fig = plt.figure(figsize=(12, 8))
+    ax = fig.add_subplot(111, projection='3d')
+
+    ax.scatter(X[y==0][:, 0], X[y==0][:, 1], X[y==0][:, 2], label='Class 0')
+    ax.scatter(X[y==1][:, 0], X[y==1][:, 1], X[y==1][:, 2], label='Class 1')
+
+    x1_min, x1_max = X[:, 0].min() - 1, X[:, 0].max() + 1
+    x2_min, x2_max = X[:, 1].min() - 1, X[:, 1].max() + 1
+    xx1, xx2 = np.meshgrid(np.arange(x1_min, x1_max, 0.02),
+                           np.arange(x2_min, x2_max, 0.02))
+    
+    z = (-clf.intercept_[0] - clf.coef_[0][0] * xx1 - clf.coef_[0][1] * xx2) / clf.coef_[0][2]
+
+    ax.plot_surface(xx1, xx2, z, alpha=0.3)
+
+    ax.set_xlabel('Feature 1')
+    ax.set_ylabel('Feature 2')
+    ax.set_zlabel('Feature 3')
+    ax.set_title('3D Dataset with Decision Boundary')
+    ax.legend()
+    plt.show()
+
+# Run all visualizations
+plot_sigmoid()
+plot_2d_decision_boundary()
+plot_3d_decision_boundary()
+
+```
+
+Interactive Logistic Regression Visualization 
+
+1. Sigmoid Function:
+   - The S-shaped curve transforms the combined input into a probability between 0 and 1.
+   - The red dashed line (x=0) represents the decision boundary where the model is equally confident about both classes.
+   - The green dotted line (y=0.5) shows the typical classification threshold.
+
+   ![Sigmoid Function and Decision Boundary](../static/sigmoid-function-and-decision-boundary.png)
+
+2. 2D Decision Boundary:
+   - In 2D space, the decision boundary is a line.
+   - Points on one side are classified as one class, points on the other side as the other class.
+   - The line represents where the model is equally confident about both classes.
+
+   ![2d Decision Boundary](../static/2d-decision-boundary.png)
+
+3. 3D Decision Boundary:
+   - In 3D space, the decision boundary becomes a plane.
+   - The plane divides the 3D space into two regions, each corresponding to a class.
+
+   ![3d Decision Boundary](../static/3d-decision-boundary.png)
+
+4. Hyperplane in Higher Dimensions:
+   - For datasets with more than 3 features, we can't visualize the decision boundary directly.
+   - The concept extends to a hyperplane in higher-dimensional space.
+   - A hyperplane in n-dimensional space is the subspace of dimension n-1 that divides the space into two parts.
+
+   ![Mind Blowing](../static/mind-blowing.gif)
+
+5. The Equation of the Hyperplane:
+   - For n features, the hyperplane is defined by the equation: w1*x1 + w2*x2 + ... + wn*xn + b = 0
+   - w1, w2, ..., wn are the weights learned by the model, and b is the bias term.
+
+6. Classification Process:
+   - The model calculates w1*x1 + w2*x2 + ... + wn*xn + b for a given input.
+   - This value is passed through the sigmoid function to get a probability.
+   - If the probability > 0.5, it's classified as the positive class, otherwise as the negative class.
+
+These visualizations help us understand how logistic regression makes decisions in different dimensional spaces. 
+While we can't visualize beyond 3D, the same principle applies in higher dimensions: the model finds a 
+hyperplane that best separates the classes in the feature space.
+
+Further Reading:
+1. "Introduction to Statistical Learning" by James, Witten, Hastie, and Tibshirani - Chapter 4
+2. "Pattern Recognition and Machine Learning" by Christopher Bishop - Chapter 4
+3. Stanford CS229 course notes on logistic regression
+4. Scikit-learn documentation on logistic regression
+5. "Deep Learning" by Goodfellow, Bengio, and Courville - Chapter 6.2 (for a more advanced treatment)
+""")
 
 ## Training the Model
 To make accurate predictions, the model needs to learn the right weights (`w1`, `w2`, ..., `wn`) and bias (`b`). This is done through a process called training, where the model is shown many examples of input data and their corresponding correct outputs.
@@ -162,10 +305,10 @@ plt.ylabel('Recall')
 plt.title('F1 Score as a Function of Precision and Recall')
 plt.show()
 ```
+ ![F1 score](../static/f1-score.png)
 
-[The resulting contour plot would be inserted here, showing how F1 Score varies with precision and recall]
-
-In this plot, darker colors represent higher F1 Scores. You can see that to achieve a high F1 Score, both precision and recall need to be high. The F1 Score decreases rapidly if either precision or recall is low.
+In this plot, darker colors represent higher F1 Scores. You can see that to achieve a high F1 Score, both precision and recall need to be high. 
+The F1 Score decreases rapidly if either precision or recall is low.
 
 #### Key Points:
 1. The F1 Score ranges from 0 to 1, with 1 being the best possible score.
@@ -573,4 +716,191 @@ Now, let's discuss some important concepts:
 - Logistic regression is known for its efficiency, making it a good choice for quick results or large datasets.
 - For more complex problems or very large datasets, you might need more sophisticated models that take longer to train.
 
+
+# Advanced Concepts and Model Improvement
+
+Now that we've trained our initial model and evaluated its performance, let's explore some advanced concepts that can help us improve our model and gain deeper insights into its behavior.
+
+## 1. Hyperparameter Tuning
+
+In our initial model, we used a learning rate of 0.01 and trained for 1000 epochs. But how do we know these are the best values? Let's experiment with different combinations:
+
+```python
+learning_rates = [0.001, 0.01, 0.1]
+epochs_list = [100, 500, 1000]
+
+for lr in learning_rates:
+    for epochs in epochs_list:
+        model = LogisticRegressionModel(input_dim=X_train.shape[1])
+        optimizer = torch.optim.SGD(model.parameters(), lr=lr)
+        
+        for epoch in range(epochs):
+            y_predicted = model(X_train_tensor)
+            loss = criterion(y_predicted, y_train_tensor)
+            loss.backward()
+            optimizer.step()
+            optimizer.zero_grad()
+        
+        with torch.no_grad():
+            y_predicted = model(X_test_tensor)
+            y_predicted_cls = y_predicted.round()
+            accuracy = accuracy_score(y_test, y_predicted_cls)
+        
+        print(f"Learning rate: {lr}, Epochs: {epochs}, Accuracy: {accuracy:.4f}")
+
+# We chose lr=0.01 and epochs=1000 based on the best performance from this tuning.
+```
+
+This process, known as hyperparameter tuning, helps us find the optimal combination of learning rate and number of epochs. The results will show us which combination performs best on our test set.
+
+## 2. Feature Importance
+
+Understanding which features are most important for our predictions can provide valuable insights:
+
+```python
+feature_importance = abs(model.linear.weight.detach().numpy()[0])
+feature_names = data.feature_names
+
+for importance, name in sorted(zip(feature_importance, feature_names), reverse=True)[:10]:  # Top 10 features
+    print(f"{name}: {importance:.4f}")
+
+# Visualization of feature importance
+plt.figure(figsize=(10, 6))
+plt.bar(range(len(feature_importance)), feature_importance)
+plt.xticks(range(len(feature_importance)), feature_names, rotation=90)
+plt.title('Feature Importance')
+plt.tight_layout()
+plt.show()
+```
+
+This code extracts the weights from our model, which indicate the importance of each feature. The larger the absolute value of the weight, the more important the feature is for the prediction. This can help us understand which characteristics of a tumor are most indicative of malignancy.
+
+## 3. Cross-validation
+
+So far, we've been using a single train-test split. While this is a good start, it might not give us the most robust estimate of our model's performance. Cross-validation can help:
+
+```python
+from sklearn.model_selection import KFold
+
+kf = KFold(n_splits=5, shuffle=True, random_state=42)
+
+cv_scores = []
+
+for fold, (train_idx, val_idx) in enumerate(kf.split(X_train_scaled)):
+    X_train_fold = X_train_scaled[train_idx]
+    y_train_fold = y_train[train_idx]
+    X_val_fold = X_train_scaled[val_idx]
+    y_val_fold = y_train[val_idx]
+    
+    model = LogisticRegressionModel(input_dim=X_train.shape[1])
+    optimizer = torch.optim.SGD(model.parameters(), lr=0.01)
+    
+    for epoch in range(1000):
+        y_predicted = model(torch.tensor(X_train_fold, dtype=torch.float32))
+        loss = criterion(y_predicted, torch.tensor(y_train_fold, dtype=torch.float32).view(-1, 1))
+        loss.backward()
+        optimizer.step()
+        optimizer.zero_grad()
+    
+    with torch.no_grad():
+        y_val_predicted = model(torch.tensor(X_val_fold, dtype=torch.float32))
+        y_val_predicted_cls = y_val_predicted.round()
+        accuracy = accuracy_score(y_val_fold, y_val_predicted_cls)
+    
+    cv_scores.append(accuracy)
+    print(f"Fold {fold+1} Accuracy: {accuracy:.4f}")
+
+print(f"Mean CV Accuracy: {np.mean(cv_scores):.4f}")
+```
+
+This 5-fold cross-validation gives us a more robust estimate of our model's performance by training and evaluating it on different subsets of the data.
+
+## 4. Comparison to Baseline
+
+To truly understand how well our model is performing, it's useful to compare it to a simple baseline:
+
+```python
+from sklearn.dummy import DummyClassifier
+
+dummy_clf = DummyClassifier(strategy="most_frequent")
+dummy_clf.fit(X_train, y_train)
+dummy_accuracy = dummy_clf.score(X_test, y_test)
+
+print(f"Dummy Classifier Accuracy: {dummy_accuracy:.4f}")
+print(f"Our Model Accuracy: {accuracy:.4f}")
+```
+
+This dummy classifier always predicts the most frequent class. If our model isn't performing significantly better than this baseline, it might indicate that we need to revisit our approach.
+
+By exploring these advanced concepts, we've gained a deeper understanding of our logistic regression model and its performance on the breast cancer dataset. These techniques can be applied to improve and validate any machine learning model you build in the future.
+
+# Conclusion and Limitations
+
 In conclusion, our logistic regression model performs excellently on this breast cancer dataset. It's accurate, fast, and doesn't show signs of significant overfitting or underfitting. However, it's crucial to remember that in a medical context like this, we need to be especially careful about false negatives (malignant tumors classified as benign). While our model only had one such case, in a real-world application, we might want to adjust our model or decision threshold to minimize these potentially dangerous misclassifications.
+
+## Real-world Application and Limitations
+
+In a real medical setting, this model could be used as a diagnostic aid, helping doctors to quickly identify potentially malignant tumors. However, it's crucial to note several limitations:
+
+1. This model should not be used as the sole diagnostic tool. It should always be used in conjunction with a doctor's expertise and other diagnostic methods.
+
+2. The model's performance, while good on this dataset, may not generalize to all populations or all types of breast cancer. It would need extensive testing and validation before being used in a clinical setting.
+
+3. The consequences of false negatives (predicting a tumor is benign when it's actually malignant) are much more severe than false positives. In a real-world application, we might want to adjust our decision threshold to minimize false negatives, even if it increases false positives.
+
+4. The model doesn't provide uncertainty estimates, which would be valuable in a medical context.
+
+5. The model assumes that all features are equally available and reliable for all patients, which may not be the case in practice.
+
+## Limitations of Binary Classification
+
+1. Binary Outcome: Our current model is limited to predicting only two classes (malignant or benign). In many real-world scenarios, we might need to classify into multiple categories.
+
+2. Linear Decision Boundary: Logistic regression assumes a linear relationship between features and the log-odds of the outcome. This may not always be the case in complex datasets.
+
+3. Feature Independence: The model assumes that features are independent, which is often not true in real-world data.
+
+4. Outlier Sensitivity: Logistic regression can be sensitive to outliers, potentially skewing the decision boundary.
+
+5. Limited Expressiveness: For highly complex patterns in data, logistic regression might not be expressive enough to capture all the nuances.
+
+## Other Types of Regression
+
+1. Multinomial Logistic Regression: An extension of binary logistic regression that can handle multiple classes. It's useful when we need to classify into more than two categories.
+
+2. Ordinal Logistic Regression: Used when the target variable has ordered categories. It takes into account the order of the classes.
+
+3. Linear Regression: Predicts a continuous output variable based on one or more input features. It's used when the target variable is a real number (e.g., price, temperature).
+
+4. Polynomial Regression: A form of linear regression where the relationship between the independent variable and the dependent variable is modeled as an nth degree polynomial.
+
+5. Ridge and Lasso Regression: These are linear regression techniques with added regularization to prevent overfitting and handle multicollinearity.
+
+6. Elastic Net Regression: A hybrid of Ridge and Lasso regression, combining their penalties.
+
+Each of these regression techniques has its own strengths and is suited for different types of problems. As we move forward, we'll explore decision trees, which can handle both classification and regression tasks, providing a flexible alternative to these regression methods.
+
+
+## Glossary of Terms
+
+- Logistic Regression: A statistical method for predicting a binary outcome based on one or more independent variables.
+- Sigmoid Function: A mathematical function that maps any input to a value between 0 and 1.
+- Binary Classification: A type of classification task where the goal is to predict one of two possible outcomes.
+- Feature: An individual measurable property of the phenomenon being observed.
+- Weight: A parameter in the model that determines the importance of each feature.
+- Bias: An additional parameter in the model that allows the decision boundary to be shifted.
+- Epoch: One complete pass through the entire training dataset.
+- Loss Function: A method of evaluating how well the algorithm models the dataset.
+- Gradient Descent: An optimization algorithm used to minimize the loss function.
+- Overfitting: When a model learns the training data too well, including noise and fluctuations, and performs poorly on new, unseen data.
+- Underfitting: When a model is too simple to capture the underlying pattern in the data and is just generally bad at making predictions.
+
+## Further Reading
+
+For those interested in diving deeper into logistic regression and related topics, here are some suggested resources:
+
+1. "Introduction to Statistical Learning" by Gareth James, Daniela Witten, Trevor Hastie, and Robert Tibshirani
+2. "Pattern Recognition and Machine Learning" by Christopher Bishop
+3. Scikit-learn documentation on logistic regression
+4. PyTorch tutorials on building neural networks (logistic regression is the simplest form of a neural network)
+5. "The Elements of Statistical Learning" by Trevor Hastie, Robert Tibshirani, and Jerome Friedman (for a more advanced treatment)

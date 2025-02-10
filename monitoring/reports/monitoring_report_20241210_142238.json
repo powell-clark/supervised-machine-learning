@@ -1,0 +1,162 @@
+{
+  "timestamp": "2024-12-10T14:22:38.417049",
+  "monitoring_period": {
+    "start": "2024-12-10T09:28:17.884988",
+    "end": "2024-12-10T14:22:38.414189"
+  },
+  "prediction_volume": 2366,
+  "health_check": {
+    "healthy": false,
+    "checks": {
+      "performance": {
+        "healthy": true,
+        "metric": "mae_increase",
+        "value": -0.8362420206094757,
+        "threshold": 0.15
+      },
+      "features": {
+        "healthy": true,
+        "drift_metrics": {
+          "Area in sq ft": {
+            "drift": 0.008394577821329423,
+            "significant": false
+          },
+          "No. of Bedrooms": {
+            "drift": 0.0011632023466341668,
+            "significant": false
+          },
+          "House Type": {
+            "drift": 0.00015337794748015998,
+            "significant": false
+          },
+          "Outcode": {
+            "drift": 0.00030675589496031996,
+            "significant": false
+          }
+        }
+      },
+      "market": {
+        "healthy": true,
+        "metrics": {
+          "global": {
+            "change": 0.0,
+            "volatile": false
+          },
+          "areas": {
+            "SW3": {
+              "change": 0.025539364665808528,
+              "volatile": false
+            },
+            "CR0": {
+              "change": 0.004264521955091416,
+              "volatile": false
+            },
+            "E8": {
+              "change": 0.006243577386541688,
+              "volatile": false
+            }
+          }
+        }
+      },
+      "quality": {
+        "healthy": false,
+        "failed_checks": [
+          "area_bounds"
+        ]
+      }
+    },
+    "timestamp": "2024-12-10T14:22:38.446928"
+  },
+  "performance_metrics": {
+    "mae": 67487.18657083705,
+    "rmse": 93131.12256212017,
+    "r2": 0.9324817559061243,
+    "price_bands": {
+      "(345527.867, 375057.526]": {
+        "mae": 24248.843639791532,
+        "count": 487
+      },
+      "(375057.526, 726502.401]": {
+        "mae": 31546.472493454523,
+        "count": 465
+      },
+      "(726502.401, 772153.997]": {
+        "mae": 75523.15174123755,
+        "count": 469
+      },
+      "(772153.997, 1245499.367]": {
+        "mae": 83675.02027824186,
+        "count": 477
+      },
+      "(1245499.367, 1383996.506]": {
+        "mae": 123638.98295983726,
+        "count": 468
+      }
+    }
+  },
+  "data_quality_metrics": {
+    "missing_values": {
+      "timestamp": 0.0,
+      "predicted_price": 0.0,
+      "actual_price": 0.0,
+      "Area in sq ft": 0.004649196956889264,
+      "No. of Bedrooms": 0.0,
+      "House Type": 0.0,
+      "Outcode": 0.0,
+      "City/County": 0.0,
+      "price_band": 0.0
+    },
+    "value_ranges": {
+      "predicted_price": {
+        "min": 310109.90824892005,
+        "max": 1525386.998325176,
+        "mean": 788971.7377629613,
+        "std": 357293.4041157552
+      },
+      "actual_price": {
+        "min": 345527.8675789904,
+        "max": 1383996.505582833,
+        "mean": 786487.3098704263,
+        "std": 358489.1911420821
+      },
+      "Area in sq ft": {
+        "min": 900.0,
+        "max": 2025.0,
+        "mean": 1179.8216560509554,
+        "std": 261.61572756735274
+      },
+      "No. of Bedrooms": {
+        "min": 2,
+        "max": 3,
+        "mean": 2.337278106508876,
+        "std": 0.47288063787484536
+      }
+    },
+    "outliers": {
+      "Area in sq ft": 0,
+      "No. of Bedrooms": 0
+    }
+  },
+  "market_indicators": {
+    "price_per_sqft": {
+      "mean": 635.4258181677145,
+      "median": 674.6002681844194,
+      "std": 178.12572107334884
+    },
+    "area_SW3": {
+      "volume": 798,
+      "mean_price_per_sqft": 818.0603045694021,
+      "price_movement": -0.025539364665808528
+    },
+    "area_CR0": {
+      "volume": 784,
+      "mean_price_per_sqft": 409.6081417784756,
+      "price_movement": -0.004264521955091416
+    },
+    "area_E8": {
+      "volume": 784,
+      "mean_price_per_sqft": 675.4376135087338,
+      "price_movement": -0.006243577386541688
+    }
+  }
+}

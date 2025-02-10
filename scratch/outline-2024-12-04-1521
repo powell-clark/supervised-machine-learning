@@ -1,0 +1,267 @@
+# Lesson 2b: Decision Trees - From Theory to Practice
+
+1. Introduction & Setup 
+1.1 (MD) Introduction & Overview
+1.2 (CODE) Library Imports
+1.3 (MD) Library Purposes
+1.4 (CODE) Configuration Setup
+2. Data Loading & Initial Exploration 
+2.1 (MD) Data Loading Overview
+2.2 (CODE) Load Data Function
+2.3 (MD) Initial Data Review
+2.4 (CODE) Basic Data Checks
+3. Exploratory Data Analysis [COMPLETED]
+3.1 (MD) EDA Approach
+3.2 (CODE) EDA Functions
+3.3 (CODE) Run Analysis
+3.4 (MD) EDA Discussion
+
+4. (MD) Data Processing Deep Dive
+
+4.1 (MD) Data Processing Strategy Introduction 
+
+4.2. Core Processing Steps (the strategy)
+4.2.1. **Data Validation & Cleaning**
+   Address the data quality issues identified in our exploration:
+   - Remove redundant room features (correlation coefficient ρ = 1.0)
+   - Standardize location strings (27.6% missing, requires structured handling)
+   - Clean city/county values (systematic geographic normalization)
+   - Preserve fundamental numeric features in original form
+
+4.2.2. **Initial Feature Engineering**
+   Our geographic hierarchy analysis suggests immediate structural features:
+   - Extract outcodes from postal codes (geographic aggregation)
+   - This transformation is price-independent, based purely on postal code structure
+   - Creates intermediate geographic granularity
+   - Establishes foundation for later feature encoding comparisons
+
+4.2.3. **Price Distribution Transformation**
+   Address the multiplicative nature of price variations:
+   - Apply logarithmic transformation (normalizes 222-fold range)
+   - Generate price bands for stratification
+   - Enables proper handling of multiplicative price effects
+
+4.2.4. **Train/Test Split**
+   Crucial separation point for maintaining statistical validity:
+   - Implement stratified sampling using price bands
+   - Preserve geographic distribution
+   - Establish truly independent test set
+
+4.2.5. **Feature Encoding and Target-Variable-Aware Feature Engineering**
+   Post-split transformations requiring careful handling of price information:
+
+   4.2.5A. One-Hot Encoding (Categorical to Binary Features)
+   - Convert house type to set of binary indicator columns
+   - Transform city/county to binary indicator columns
+   - Create outcode binary indicator columns
+   - Maintains complete independence from price variable
+
+   4.2.5B. Target Encoding (Price-Based Location Encoding)
+   - Hierarchical encoding: outcode → postcode → location
+   - Calculate encoding means using only training data
+   - Implement prior smoothing for stability
+   - Store training means for future predictions
+   - Handle missing values through hierarchy
+
+   4.2.5C. Mean Outcode Price per Square Foot
+   - Calculate using only training data statistics
+   - Apply stored training means to test data
+   - Persist training means for new predictions
+   - Maintain strict statistical separation
+
+4.3.1 (MD) Data validation prose (use existing from lesson 2b)
+4.3.2 (CODE) Data validation code (use existing from lesson 2b)
+
+4.4.1 (MD) Data cleaning prose (use existing from lesson 2b but make more consise without losing information)
+4.4.2 (CODE) Data validation code (use existing from lesson 2b) - drop redunant feature & display, transform bedrooms, standardize city/county, standardize locations. 
+4.4.3 (MD) Data cleaning discussion (use existing from lesson 2b but make more consise without losing information)
+
+4.5.1 (MD) Initial Feature Engineering prose explaining what features we can create - initial section is good. outcode and price per area which needs to be mean price per area to prevent price leakage. dicussion that we will create price based features later after splitting the data because of price leakage.
+4.5.2 (MD) Outcode feature discussion - brief expansion on ####  Adding Postcode Outcode feature (existing in lesson 2c)
+4.5.3 (CODE) Extracting Outcode feature (existing in lesson 2c)
+
+4.6.1 (MD) Price log transformation and price based feature engineering discussion as to why we are doing this after splitting the data
+4.6.2 (CODE) Price transformation code and analysis (use existing from lesson 2b)
+
+4.7.1 (MD) Train/Test split discussion with price band stratification explained - brief expansion on #### Train/Test Split (existing in lesson 2b)
+4.7.2 (CODE) Train/Test split code and analysis (use existing from lesson 2b)
+
+
+5. **Feature Encoding and Target-Variable-Aware Feature Engineering**
+OUR TRAIN AND TEST SET ARE NOW SPLIT TO PREVENT DATA LEAKAGE!!!! BARE THIS IN MIND GOING FORWARD!!!
+
+5.1 (MD)
+- Two encoding approaches overview:
+  - One-hot encoding 
+  - Target encoding 
+- When to use each
+- Data leakage considerations and how to prevent it
+
+## Feature Encoding Strategy
+
+Our data includes both low-cardinality categorical features (like House Type) and high-cardinality features (like Location). To properly evaluate different encoding approaches, we'll create two versions of our dataset:
+
+### Dataset 1: One-Hot Encoding Approach
+
+Target Variable:
+- Log-transformed price
+
+Features:
+1. Numeric Features:
+   - Area in sq ft
+   - No. of Bedrooms
+   - Price per area
+
+2. Categorical Features (One-Hot Encoded):
+   - House Type
+   - City/County
+   - Outcode
+
+Note: We'll exclude Postal Code and Location from this version as both are too sparse for one-hot encoding, however we'll attempt to one-hot encode them in the next lesson 2c for fair comparison.
+
+### Dataset 2: Mixed Encoding Approach
+
+Target Variable:
+- Log-transformed price
+
+Features:
+1. Numeric Features:
+   - Area in sq ft
+   - No. of Bedrooms
+   - Price per area
+
+2. Low-Cardinality Categorical (One-Hot):
+   - House Type
+   - City/County
+   
+3. Geographic Features (hierachically Target Encoded):
+   - Outcode baseline encoding
+   - Postcode with outcode prior
+   - Location with postcode prior
+
+We'll implement these encoding approaches sequentially:
+1. First, the one-hot encoding implementation
+2. Then, the hierarchical target encoding 
+3. Finally, combine them into our two datasets
+
+This will allow us to compare how different encoding strategies affect model performance and feature importance patterns.
+
+
+5.2 (CODE)
+- One-hot encoding implementation
+  - House type
+  - City/County 
+  - Outcode
+- Validation checks
+- Feature space analysis
+
+5.3 (MD)
+- Hierarchical target encoding explanation with math explaination
+- Location hierarchy concept outcode > postcode > location
+- Data leakage prevention, train means on training data and applying to test data without using test data to calculate means
+- fallback means for missing values
+- Discuss considerations for cross-validation (future lesson preview) but not implemented or used in this lesson on target encoded feature sets
+
+5.4 (CODE)
+- Sequential target encoding implementation:
+  - Outcode encoding (using training means)
+  - Postcode encoding (with outcode prior)
+  - Location encoding (with postcode prior)
+- Missing value handling using fallback means
+- Target variable leakage prevention
+- Calculating test set data on saved training means
+- Save encodings for new data used in persistence section
+
+5.5 (CODE)
+- Outcode mean price per sqft calculation
+  - Calculate training means
+  - Apply to test data without using test data to calculate means
+  - Validate distributions
+
+5.6 (MD)
+- Encoding results analysis
+- Feature space comparison
+- Production considerations
+
+6. Model Development with One-Hot Encoded Data 
+
+6.1 (MD)
+- Basic parameter tuning concepts with one-hot encoded features model only
+- Grid search explanation with one-hot encoded features model only
+- Cross-validation preview with one-hot encoded features model only
+
+6.2 (CODE)
+- Simple grid search implementation with one-hot encoded features model only
+- Basic cross-validation with one-hot encoded features model only
+- Parameter optimization with one-hot encoded features model only
+- Results tracking
+
+6.3 (MD)
+- Grid search results analysis with one-hot encoded features model only
+- Parameter selection logic with one-hot encoded features model only
+- Validation strategy with one-hot encoded features model only
+- Overfitting risks
+
+7. Model Comparison 
+
+7.1 (MD)
+- Model comparison section overview
+
+7.2 (CODE)
+- Comparing (One-Hot Encoded Features) with target encoding data features model on a basic decision tree model
+- Basic evaluation 
+- Feature importance
+
+7.3 (MD)
+- Model comparison analysis
+
+7.4 (MD)
+- First principles explaination of random forest and xgboost and why its useful in this context, which model to use when and why
+- why we'll use one-hot for these examples due to price leakage risk with target encoding and persistence and how this will be explored int he next lesson
+
+7.5 (CODE)
+- Random forest implementation on one-hot encoded features model
+- Compare to decision tree
+- Feature importance analysis
+
+7.4 (CODE)
+- XGBoost implementation n one-hot encoded features model
+- Performance comparison
+- Feature importance comparison
+
+7.5 (MD)
+- Model comparison analysis
+- Performance tradeoffs
+- Feature importance insights
+- When to use each model
+
+8. Model Persistence & Production
+
+8.1 (MD)
+- Model persistence requirements
+- Saving encoders/transformers
+- Production pipeline needs
+- Data leakage prevention, persisting encoders and transformers, introduction to next lesson
+
+8.2 (CODE)
+- Save/load model implementations
+- Save encoding mappings
+- Validation suite
+- New data transformation, using a persisted model on a line of new data
+
+8.3 (MD)
+- Production considerations
+- Monitoring needs
+- Maintenance requirements
+- Future improvements
+
+9. Conclusion 
+
+9.1 (MD)
+- Key learnings
+- Model selection guidance
+- Cross-validation importance
+- Next steps:
+  - Advanced cross-validation
+  - Target encoding with CV
+  - ATLAS preview
