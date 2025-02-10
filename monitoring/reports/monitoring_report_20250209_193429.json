@@ -1,0 +1,162 @@
+{
+  "timestamp": "2025-02-09T19:34:29.876405",
+  "monitoring_period": {
+    "start": "2025-02-09T17:36:18.705997",
+    "end": "2025-02-09T19:34:29.315090"
+  },
+  "prediction_volume": 1766,
+  "health_check": {
+    "healthy": false,
+    "checks": {
+      "performance": {
+        "healthy": true,
+        "metric": "mae_increase",
+        "value": -0.8241193799249377,
+        "threshold": 0.15
+      },
+      "features": {
+        "healthy": true,
+        "drift_metrics": {
+          "Area in sq ft": {
+            "drift": 0.03631368951622844,
+            "significant": false
+          },
+          "No. of Bedrooms": {
+            "drift": 0.00252635246972723,
+            "significant": false
+          },
+          "House Type": {
+            "drift": 0.0008752562809101194,
+            "significant": false
+          },
+          "Outcode": {
+            "drift": 0.002883015393077365,
+            "significant": false
+          }
+        }
+      },
+      "market": {
+        "healthy": true,
+        "metrics": {
+          "global": {
+            "change": 0.0,
+            "volatile": false
+          },
+          "areas": {
+            "SW3": {
+              "change": 0.07285662105299917,
+              "volatile": false
+            },
+            "CR0": {
+              "change": 0.022567433464002362,
+              "volatile": false
+            },
+            "E8": {
+              "change": 0.027186064024217527,
+              "volatile": false
+            }
+          }
+        }
+      },
+      "quality": {
+        "healthy": false,
+        "failed_checks": [
+          "area_bounds"
+        ]
+      }
+    },
+    "timestamp": "2025-02-09T19:34:29.960062"
+  },
+  "performance_metrics": {
+    "mae": 72483.1135885832,
+    "rmse": 100554.15803643361,
+    "r2": 0.9152219100587564,
+    "price_bands": {
+      "(345527.867, 376091.205]": {
+        "mae": 25640.854489844292,
+        "count": 355
+      },
+      "(376091.205, 725453.38]": {
+        "mae": 40965.835708884275,
+        "count": 355
+      },
+      "(725453.38, 772153.997]": {
+        "mae": 83201.42390968234,
+        "count": 353
+      },
+      "(772153.997, 1220315.918]": {
+        "mae": 95294.49347861574,
+        "count": 350
+      },
+      "(1220315.918, 1383996.506]": {
+        "mae": 117950.78815653236,
+        "count": 353
+      }
+    }
+  },
+  "data_quality_metrics": {
+    "missing_values": {
+      "timestamp": 0.0,
+      "predicted_price": 0.0,
+      "actual_price": 0.0,
+      "Area in sq ft": 0.01868629671574179,
+      "No. of Bedrooms": 0.0,
+      "House Type": 0.0,
+      "Outcode": 0.0,
+      "City/County": 0.0,
+      "price_band": 0.0
+    },
+    "value_ranges": {
+      "predicted_price": {
+        "min": 310109.90824892005,
+        "max": 1525386.998325176,
+        "mean": 783360.8506662328,
+        "std": 347086.1162619874
+      },
+      "actual_price": {
+        "min": 345527.8675789904,
+        "max": 1383996.505582833,
+        "mean": 770115.2459068655,
+        "std": 345446.83248044737
+      },
+      "Area in sq ft": {
+        "min": 900.0,
+        "max": 2025.0,
+        "mean": 1212.4870167339873,
+        "std": 291.59648651116527
+      },
+      "No. of Bedrooms": {
+        "min": 2,
+        "max": 3,
+        "mean": 2.334088335220838,
+        "std": 0.4718043733336063
+      }
+    },
+    "outliers": {
+      "Area in sq ft": 0,
+      "No. of Bedrooms": 0
+    }
+  },
+  "market_indicators": {
+    "price_per_sqft": {
+      "mean": 613.7496955796358,
+      "median": 663.7694600517713,
+      "std": 181.22907862666267
+    },
+    "area_SW3": {
+      "volume": 590,
+      "mean_price_per_sqft": 778.3374386393498,
+      "price_movement": -0.07285662105299917
+    },
+    "area_CR0": {
+      "volume": 589,
+      "mean_price_per_sqft": 402.07901206721834,
+      "price_movement": -0.022567433464002362
+    },
+    "area_E8": {
+      "volume": 587,
+      "mean_price_per_sqft": 661.2033978864691,
+      "price_movement": -0.027186064024217527
+    }
+  }
+}

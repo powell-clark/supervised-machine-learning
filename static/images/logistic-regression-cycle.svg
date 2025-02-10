@@ -1,0 +1,64 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 400">
+    <!-- Arrow definitions -->
+    <defs>
+        <marker id="triangle" 
+                viewBox="0 0 10 10"
+                refX="9" 
+                refY="5"
+                markerWidth="6"
+                markerHeight="6"
+                orient="auto">
+            <path d="M 0 0 L 10 5 L 0 10 z" fill="#666"/>
+        </marker>
+    </defs>
+
+    <!-- Background -->
+    <rect width="1000" height="400" fill="white"/>
+    
+    <!-- Forward Pass Box -->
+    <rect x="100" y="50" width="800" height="150" fill="#F0F7FF" stroke="#2196F3" stroke-width="2" rx="20"/>
+    <text x="500" y="85" font-family="Arial" font-size="28" fill="#2196F3" text-anchor="middle">Forward Pass</text>
+    
+    <!-- Forward Pass Steps -->
+    <rect x="130" y="100" width="220" height="80" fill="white" stroke="#2196F3" stroke-width="2" rx="15"/>
+    <text x="240" y="130" font-family="Arial" font-size="14" fill="#333" text-anchor="middle">1. Linear Combination</text>
+    <text x="240" y="160" font-family="Arial" font-size="14" fill="#666" text-anchor="middle">z = w₁f₁ + w₂f₂ + ... + wₙfₙ + b</text>
+    
+    <rect x="390" y="100" width="220" height="80" fill="white" stroke="#2196F3" stroke-width="2" rx="15"/>
+    <text x="500" y="130" font-family="Arial" font-size="14" fill="#333" text-anchor="middle">2. Apply Sigmoid</text>
+    <text x="500" y="160" font-family="Arial" font-size="14" fill="#666" text-anchor="middle">σ(z) = 1/(1 + e⁻ᶻ)</text>
+
+    <rect x="650" y="100" width="220" height="80" fill="white" stroke="#2196F3" stroke-width="2" rx="15"/>
+    <text x="760" y="130" font-family="Arial" font-size="14" fill="#333" text-anchor="middle">3. Calculate Loss</text>
+    <text x="760" y="160" font-family="Arial" font-size="14" fill="#666" text-anchor="middle">-y·log(σ(z)) - (1-y)·log(1-σ(z))</text>
+    
+    <!-- Backward Pass Box -->
+    <rect x="100" y="220" width="800" height="150" fill="#FFF5EB" stroke="#FF9800" stroke-width="2" rx="20"/>
+    <text x="500" y="255" font-family="Arial" font-size="28" fill="#FF9800" text-anchor="middle">Backward Pass</text>
+    
+    <!-- Backward Pass Steps -->
+    <rect x="650" y="270" width="220" height="90" fill="white" stroke="#FF9800" stroke-width="2" rx="15"/>
+    <text x="760" y="295" font-family="Arial" font-size="14" fill="#333" text-anchor="middle">4. Compute Gradients</text>
+    <text x="760" y="320" font-family="Arial" font-size="14" fill="#666" text-anchor="middle">∂L/∂wᵢ = (σ(z) - y)fᵢ</text>
+    <text x="760" y="345" font-family="Arial" font-size="14" fill="#666" text-anchor="middle">∂L/∂b = (σ(z) - y)</text>
+    <rect x="390" y="270" width="220" height="90" fill="white" stroke="#FF9800" stroke-width="2" rx="15"/>
+    <text x="500" y="295" font-family="Arial" font-size="14" fill="#333" text-anchor="middle">5. Calculate Changes</text>
+    <text x="500" y="320" font-family="Arial" font-size="14" fill="#666" text-anchor="middle">Δwᵢ = -LR × (∂L/∂wᵢ)</text>
+    <text x="500" y="345" font-family="Arial" font-size="14" fill="#666" text-anchor="middle">Δb = -LR × (∂L/∂b)</text>
+    
+    <rect x="130" y="270" width="220" height="90" fill="white" stroke="#FF9800" stroke-width="2" rx="15"/>
+    <text x="240" y="295" font-family="Arial" font-size="14" fill="#333" text-anchor="middle">6. Update Weights and Bias</text>
+    <text x="240" y="320" font-family="Arial" font-size="14" fill="#666" text-anchor="middle">wᵢ = wᵢ + Δwᵢ</text>
+    <text x="240" y="345" font-family="Arial" font-size="14" fill="#666" text-anchor="middle">b = b + Δb</text>
+    <!-- Arrows -->
+    <!-- Forward arrows -->
+    <path d="M355 140 L385 140" fill="none" stroke="#666" stroke-width="1.5" marker-end="url(#triangle)"/>
+    <path d="M615 140 L645 140" fill="none" stroke="#666" stroke-width="1.5" marker-end="url(#triangle)"/>
+    <!-- Downward arrow -->
+    <path d="M760 185 L760 265" fill="none" stroke="#666" stroke-width="1.5" marker-end="url(#triangle)"/>
+    <!-- Backward arrows -->
+    <path d="M645 310 L615 310" fill="none" stroke="#666" stroke-width="1.5" marker-end="url(#triangle)"/>
+    <path d="M385 310 L355 310" fill="none" stroke="#666" stroke-width="1.5" marker-end="url(#triangle)"/>
+    <!-- Cycle arrow - now goes outside boxes -->
+    <path d="M130 310 L80 310 L80 140 L125 140" fill="none" stroke="#666" stroke-width="1.5" marker-end="url(#triangle)"/>
+</svg>

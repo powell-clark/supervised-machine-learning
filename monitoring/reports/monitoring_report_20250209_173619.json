@@ -1,0 +1,162 @@
+{
+  "timestamp": "2025-02-09T17:36:19.491588",
+  "monitoring_period": {
+    "start": "2025-02-09T17:36:18.705997",
+    "end": "2025-02-09T17:36:19.413572"
+  },
+  "prediction_volume": 400,
+  "health_check": {
+    "healthy": false,
+    "checks": {
+      "performance": {
+        "healthy": true,
+        "metric": "mae_increase",
+        "value": -0.8132736690515436,
+        "threshold": 0.15
+      },
+      "features": {
+        "healthy": true,
+        "drift_metrics": {
+          "Area in sq ft": {
+            "drift": 0.055698371893744575,
+            "significant": false
+          },
+          "No. of Bedrooms": {
+            "drift": 0.0021367521367520914,
+            "significant": false
+          },
+          "House Type": {
+            "drift": 0.0009856753069577007,
+            "significant": false
+          },
+          "Outcode": {
+            "drift": 0.0019713506139154013,
+            "significant": false
+          }
+        }
+      },
+      "market": {
+        "healthy": true,
+        "metrics": {
+          "global": {
+            "change": 0.0,
+            "volatile": false
+          },
+          "areas": {
+            "SW3": {
+              "change": 0.10891217646086737,
+              "volatile": false
+            },
+            "CR0": {
+              "change": 0.039967875992034,
+              "volatile": false
+            },
+            "E8": {
+              "change": 0.039676436968196005,
+              "volatile": false
+            }
+          }
+        }
+      },
+      "quality": {
+        "healthy": false,
+        "failed_checks": [
+          "area_bounds"
+        ]
+      }
+    },
+    "timestamp": "2025-02-09T17:36:19.545990"
+  },
+  "performance_metrics": {
+    "mae": 76952.79815559028,
+    "rmse": 106840.0445473549,
+    "r2": 0.8980830004793844,
+    "price_bands": {
+      "(345527.867, 375128.522]": {
+        "mae": 26855.872542831094,
+        "count": 80
+      },
+      "(375128.522, 726502.401]": {
+        "mae": 43678.9043509585,
+        "count": 81
+      },
+      "(726502.401, 772153.997]": {
+        "mae": 92619.1312019236,
+        "count": 80
+      },
+      "(772153.997, 1212393.337]": {
+        "mae": 110122.53776695058,
+        "count": 79
+      },
+      "(1212393.337, 1366610.907]": {
+        "mae": 112318.09033298763,
+        "count": 80
+      }
+    }
+  },
+  "data_quality_metrics": {
+    "missing_values": {
+      "timestamp": 0.0,
+      "predicted_price": 0.0,
+      "actual_price": 0.0,
+      "Area in sq ft": 0.0275,
+      "No. of Bedrooms": 0.0,
+      "House Type": 0.0,
+      "Outcode": 0.0,
+      "City/County": 0.0,
+      "price_band": 0.0
+    },
+    "value_ranges": {
+      "predicted_price": {
+        "min": 310109.90824892005,
+        "max": 1452204.7843592237,
+        "mean": 780389.9527107755,
+        "std": 339812.68625690177
+      },
+      "actual_price": {
+        "min": 345527.8675789904,
+        "max": 1366610.906946547,
+        "mean": 759248.5378175958,
+        "std": 335084.464834048
+      },
+      "Area in sq ft": {
+        "min": 900.0,
+        "max": 2025.0000000000002,
+        "mean": 1235.1670951156811,
+        "std": 307.68554932754563
+      },
+      "No. of Bedrooms": {
+        "min": 2,
+        "max": 3,
+        "mean": 2.335,
+        "std": 0.47258156262526085
+      }
+    },
+    "outliers": {
+      "Area in sq ft": 0,
+      "No. of Bedrooms": 0
+    }
+  },
+  "market_indicators": {
+    "price_per_sqft": {
+      "mean": 598.6738778333836,
+      "median": 654.1955148999704,
+      "std": 181.32244327744507
+    },
+    "area_SW3": {
+      "volume": 134,
+      "mean_price_per_sqft": 748.0687776294938,
+      "price_movement": -0.10891217646086737
+    },
+    "area_CR0": {
+      "volume": 133,
+      "mean_price_per_sqft": 394.9211241670859,
+      "price_movement": -0.039967875992034
+    },
+    "area_E8": {
+      "volume": 133,
+      "mean_price_per_sqft": 652.713925515636,
+      "price_movement": -0.039676436968196005
+    }
+  }
+}
