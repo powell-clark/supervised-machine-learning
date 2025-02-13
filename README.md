@@ -57,4 +57,4 @@ source venv/bin/activate
 pip install -r requirements.txt
 ```
 ---
-© 2025 Powell-Clark Limited
+Written by Emmanuel Powell-Clark | © 2025 Powell-Clark Limited
