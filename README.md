@@ -1,6 +1,10 @@
 # 🎓 Supervised Machine Learning
 
-This repository teaches machine learning from first principles using Python. Starting with foundational mathematics (derivatives, exp/log, probability), each notebook builds complete understanding before exploring modern tools like scikit-learn and PyTorch. All mathematical concepts are derived step-by-step, making the content accessible to anyone with basic calculus knowledge. Part of a broader machine learning series, with companion repositories for unsupervised, reinforcement and other types of learning in development.
+This repository teaches machine learning from first principles using Python. 
+
+Starting with foundational mathematics (derivatives, exp/log, probability), each notebook builds complete understanding before exploring modern tools like scikit-learn and PyTorch. 
+
+All mathematical concepts are derived step-by-step, making the content accessible to anyone with basic high school calculus knowledge. Part of a broader machine learning series, with companion repositories for unsupervised, reinforcement and other types of learning in development.
 
 ## 📚 Notebooks
 
