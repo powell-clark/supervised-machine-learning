@@ -22,7 +22,7 @@ Deep dive into decision tree theory with a complete from-scratch implementation.
 * [View Source](notebooks/2a_decision_trees_theory.ipynb)
 
 ### 2b_decision_trees_practical.ipynb
-Real-world application building a London housing market price predictor.
+Real-world application building a London housing market price predictor with Scikit-learn, random forests and XGBoost.
 * [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/powell-clark/supervised-machine-learning/blob/main/notebooks/2b_decision_trees_practical.ipynb)
 * [View Source](notebooks/2b_decision_trees_practical.ipynb)
 
