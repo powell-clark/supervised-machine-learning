@@ -60,5 +60,29 @@ python3 -m venv venv
 source venv/bin/activate
 pip install -r requirements.txt
 ```
+
+## 📝 License & Usage
+
+© 2025 Powell-Clark Limited. All rights reserved.
+
+This educational resource is created to help others learn machine learning from first principles.
+
+### Permissions
+✅ Use and adapt these materials for learning  
+✅ Contribute improvements via pull requests  
+✅ Share with attribution in educational contexts  
+✅ Use code examples in your projects  
+
+### Contact
+For questions or commercial use inquiries:
+- 📧 emmanuel@powell-clark.com
+
+### How to Credit
+If you found this resource helpful, please credit as:
+```
+Powell-Clark (2025). Supervised Machine Learning from First Principles.
+GitHub: https://github.com/powell-clark/supervised-machine-learning
+```
+
 ---
-Written by Emmanuel Powell-Clark | © 2025 Powell-Clark Limited
+Written by Emmanuel Powell-Clark
