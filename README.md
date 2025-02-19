@@ -34,10 +34,10 @@ Real-world prediction of London housing market prices with Scikit-learn, random 
 * [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/powell-clark/supervised-machine-learning/blob/main/notebooks/2b_decision_trees_practical.ipynb)
 * [View Source](notebooks/2b_decision_trees_practical.ipynb)
 
-### 2c_decision_trees_ATLAS.ipynb
+### 2c_decision_trees_ATLAS_model_comparison.ipynb
 Automated Tree Learning Analysis System (ATLAS) for feature engineering and model comparison.
-* [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/powell-clark/supervised-machine-learning/blob/main/notebooks/2c_decision_trees_ATLAS.ipynb)
-* [View Source](notebooks/2c_decision_trees_ATLAS.ipynb)
+* [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/powell-clark/supervised-machine-learning/blob/main/notebooks/2c_decision_trees_ATLAS_model_comparison.ipynb)
+* [View Source](notebooks/2c_decision_trees_ATLAS_model_comparison.ipynb)
 
 
 ### 🧠 Neural Networks (Coming Soon)
