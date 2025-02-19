@@ -2,13 +2,17 @@
 
 This repository teaches machine learning from first principles using Python. 
 
-Starting with foundational mathematics (derivatives, exp/log, probability), each notebook builds complete understanding before exploring modern tools like Scikit-learn and PyTorch. 
+Starting with foundational mathematics (derivatives, exp/log, probability), each notebook builds complete understanding before exploring modern tools like Scikit-learn and PyTorch. All mathematical concepts are derived step-by-step, making the content accessible to anyone with basic high school calculus knowledge. 
 
-All mathematical concepts are derived step-by-step, making the content accessible to anyone with basic high school calculus knowledge. This aims to be part of a broader machine learning series, with companion repositories for unsupervised, reinforcement and other state-of-the-art machine learning domains in development.
+This aims to be part of a broader machine learning series, with companion repositories for unsupervised, reinforcement and other state-of-the-art machine learning domains in development.
 
 ## 📚 Notebooks
 
-🚀 Quick Start: Click any "Open in Colab" link below to run notebooks directly in your browser - no setup required!
+🚀 Quick Start:  Run notebooks directly in your browser - no setup required!
+1. Click any "Open in Colab" button below 
+2. In Colab: Click "Connect" (top-right) 
+3. Click "Runtime" > "Run all" (top menu)
+
 
 ### 1a_logistic_regression_theory.ipynb  
 Theory & from-scratch implementation of logistic regression using the Wisconsin Breast Cancer dataset.
