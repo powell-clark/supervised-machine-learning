@@ -8,7 +8,11 @@ This aims to be part of a broader machine learning series, with companion reposi
 
 ## 📚 Notebooks
 
-🚀 Quick Start: Click any "Open in Colab" link below to run notebooks directly in your browser - no setup required!
+🚀 Quick Start:  Run notebooks directly in your browser - no setup required!
+1. Click any "Open in Colab" button above 
+2. In Colab: Click "Connect" (top-right) 
+3. Click "Runtime" > "Run all" (top menu)
+
 
 ### 1a_logistic_regression_theory.ipynb  
 Theory & from-scratch implementation of logistic regression using the Wisconsin Breast Cancer dataset.
