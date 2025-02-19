@@ -9,7 +9,7 @@ This aims to be part of a broader machine learning series, with companion reposi
 ## 📚 Notebooks
 
 🚀 Quick Start:  Run notebooks directly in your browser - no setup required!
-1. Click any "Open in Colab" button above 
+1. Click any "Open in Colab" button below 
 2. In Colab: Click "Connect" (top-right) 
 3. Click "Runtime" > "Run all" (top menu)
 
