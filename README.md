@@ -65,28 +65,27 @@ source venv/bin/activate
 pip install -r requirements.txt
 ```
 
-## 📝 License & Usage
+## Contributing & License
 
-© 2025 Powell-Clark Limited. All rights reserved.
+This project is licensed under the Apache License 2.0  
+Copyright (c) 2025 Powell-Clark Limited
 
-This educational resource is created to help others learn machine learning from first principles.
+### Contributing
+We welcome community contributions to improve these educational materials! Here's how you can help:
 
-### Permissions
-✅ Use and adapt these materials for learning  
-✅ Contribute improvements via pull requests  
-✅ Share with attribution in educational contexts  
-✅ Use code examples in your projects  
+- Spot a typo or unclear explanation? Open a pull request
+- Have an idea for improvement? Create an issue
+- Want to add new examples or exercises? We'd love to see them
+- Found a bug in the code? Let us know
 
-### Contact
-For questions or commercial use inquiries:
-- 📧 emmanuel@powell-clark.com
+Contributors will be acknowledged in our CONTRIBUTORS.md file which will be created with our first contribution.
 
-### How to Credit
-If you found this resource helpful, please credit as:
+### Citation
+If you use these materials in your work, please cite as:
 ```
 Powell-Clark (2025). Supervised Machine Learning from First Principles.
 GitHub: https://github.com/powell-clark/supervised-machine-learning
 ```
 
----
-Written by Emmanuel Powell-Clark
+### Contact
+Questions or feedback? Contact emmanuel@powell-clark.com
