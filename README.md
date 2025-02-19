@@ -67,8 +67,8 @@ pip install -r requirements.txt
 
 ## Contributing & License
 
-This project is licensed under the Apache License 2.0  
-Copyright (c) 2025 Powell-Clark Limited
+Copyright © 2025 Powell-Clark Limited  
+Licensed under the Apache License, Version 2.0
 
 ### Contributing
 We welcome community contributions to improve these educational materials! Here's how you can help:
