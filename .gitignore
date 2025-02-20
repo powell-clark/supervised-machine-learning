@@ -76,7 +76,6 @@ venv.bak/
 *.onnx
 
 # Data
-data/
 datasets/
 
 # Logs
