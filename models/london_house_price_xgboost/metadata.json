@@ -1,0 +1,34 @@
+{
+  "training_date": "2025-02-20",
+  "metrics": {
+    "train_r2": 0.9796176405795771,
+    "test_r2": 0.9080544936779833,
+    "train_mae": 151653.03816451156,
+    "test_mae": 412115.40849497146
+  },
+  "feature_names": [
+    "Area in sq ft",
+    "No. of Bedrooms",
+    "House Type_Bungalow",
+    "House Type_Duplex",
+    "House Type_Flat / Apartment",
+    "House Type_House",
+    "House Type_Mews",
+    "House Type_New development",
+    "House Type_Penthouse",
+    "House Type_Studio",
+    "City/County_city of london",
+    "City/County_essex",
+    "City/County_hertfordshire",
+    "City/County_kent",
+    "City/County_london",
+    "City/County_middlesex",
+    "City/County_surrey",
+    "City/County_nan",
+    "location_outcode_encoded",
+    "location_postcode_encoded",
+    "location_encoded",
+    "price_per_sqft"
+  ],
+  "n_features": 22
+}
