@@ -16,28 +16,29 @@ This aims to be part of a broader machine learning series, with companion reposi
 
 ### 1a_logistic_regression_theory.ipynb  
 Theory & from-scratch implementation of logistic regression using the Wisconsin Breast Cancer dataset.
-* <a href="https://colab.research.google.com/github/powell-clark/supervised-machine-learning/blob/main/notebooks/1a_logistic_regression_theory.ipynb" target="_blank" rel="noopener noreferrer"><img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab"/></a>
-* <a href="notebooks/1a_logistic_regression_theory.ipynb" target="_blank" rel="noopener noreferrer">View Source</a>
+* [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/powell-clark/supervised-machine-learning/blob/main/notebooks/1a_logistic_regression_theory.ipynb)
+* [View Source](notebooks/1a_logistic_regression_theory.ipynb)
 
 ### 1b_logistic_regression_practical.ipynb
 Production-grade PyTorch implementation with modern ML engineering practices.
-* <a href="https://colab.research.google.com/github/powell-clark/supervised-machine-learning/blob/main/notebooks/1b_logistic_regression_practical.ipynb" target="_blank" rel="noopener noreferrer"><img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab"/></a>
-* <a href="notebooks/1b_logistic_regression_practical.ipynb" target="_blank" rel="noopener noreferrer">View Source</a>
+* [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/powell-clark/supervised-machine-learning/blob/main/notebooks/1b_logistic_regression_practical.ipynb)
+* [View Source](notebooks/1b_logistic_regression_practical.ipynb)
 
 ### 2a_decision_trees_theory.ipynb
 Deep dive into decision tree theory with a complete from-scratch implementation.
-* <a href="https://colab.research.google.com/github/powell-clark/supervised-machine-learning/blob/main/notebooks/2a_decision_trees_theory.ipynb" target="_blank" rel="noopener noreferrer"><img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab"/></a>
-* <a href="notebooks/2a_decision_trees_theory.ipynb" target="_blank" rel="noopener noreferrer">View Source</a>
+* [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/powell-clark/supervised-machine-learning/blob/main/notebooks/2a_decision_trees_theory.ipynb)
+* [View Source](notebooks/2a_decision_trees_theory.ipynb)
 
 ### 2b_decision_trees_practical.ipynb
 Real-world prediction of London housing market prices with Scikit-learn, random forests and XGBoost.
-* <a href="https://colab.research.google.com/github/powell-clark/supervised-machine-learning/blob/main/notebooks/2b_decision_trees_practical.ipynb" target="_blank" rel="noopener noreferrer"><img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab"/></a>
-* <a href="notebooks/2b_decision_trees_practical.ipynb" target="_blank" rel="noopener noreferrer">View Source</a>
+* [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/powell-clark/supervised-machine-learning/blob/main/notebooks/2b_decision_trees_practical.ipynb)
+* [View Source](notebooks/2b_decision_trees_practical.ipynb)
 
 ### 2c_decision_trees_ATLAS_model_comparison.ipynb
 Automated Tree Learning Analysis System (ATLAS) for feature engineering and model comparison.
-* <a href="https://colab.research.google.com/github/powell-clark/supervised-machine-learning/blob/main/notebooks/2c_decision_trees_ATLAS_model_comparison.ipynb" target="_blank" rel="noopener noreferrer"><img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab"/></a>
-* <a href="notebooks/2c_decision_trees_ATLAS_model_comparison.ipynb" target="_blank" rel="noopener noreferrer">View Source</a>
+* [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/powell-clark/supervised-machine-learning/blob/main/notebooks/2c_decision_trees_ATLAS_model_comparison.ipynb)
+* [View Source](notebooks/2c_decision_trees_ATLAS_model_comparison.ipynb)
+
 
 ### 🧠 Neural Networks (Coming Soon)
 Implementation of neural networks and deep learning fundamentals.
