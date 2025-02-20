@@ -72,7 +72,6 @@ venv.bak/
 # PyTorch specific
 *.pth
 *.pt
-*.pkl
 *.onnx
 
 # Logs
