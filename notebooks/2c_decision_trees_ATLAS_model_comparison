@@ -8,7 +8,7 @@
       "source": [
         "# Lesson 2C: ATLAS - Decision Tree Comparison\n",
         "\n",
-        "<a id=\"introduction\"></a>\n",
+        "<a name=\"introduction\"></a>\n",
         "## Introduction\n",
         "\n",
         "Ok so if you've gotten this far you might be wondering: What's the best type of decision tree for predicting house prices? How best to configure such a tree? What features give the best predictions without overfitting?\n",
@@ -61,7 +61,7 @@
       },
       "source": [
         "\n",
-        "<a id=\"why-build-atlas\"></a>\n",
+        "<a name=\"why-build-atlas\"></a>\n",
         "## Why build ATLAS?\n",
         "Let's be upfront - we're building this pipeline because:\n",
         "\n",
@@ -86,7 +86,7 @@
         "\n",
         "Let's dive in by setting up our tools and loading our data.\n",
         "\n",
-        "<a id=\"atlas-architecture\"></a>\n",
+        "<a name=\"atlas-architecture\"></a>\n",
         "## ATLAS architecture\n",
         "\n",
         "At its core, ATLAS is a pipeline that automates the process of:\n",
@@ -100,7 +100,7 @@
         "- Multiple training/validation splits\n",
         "- All while preventing common mistakes such as target variable leakage\n",
         "\n",
-        "<a id=\"understanding-k-fold-cross-validation\"></a>\n",
+        "<a name=\"understanding-k-fold-cross-validation\"></a>\n",
         "### Understanding k-fold cross-validation in ATLAS\n",
         "\n",
         "Cross-validation sits at the heart of ATLAS's validation strategy. It lets us systematically rotate which portion of our training data is used for validation, with 'k' referring to the number of groups we split our data into.\n",
@@ -151,7 +151,7 @@
         "\n",
         "For ATLAS, this means we can tell if a model really works across all kinds of London properties and hasn't just gotten lucky with one split.\n",
         "\n",
-        "<a id=\"core-components\"></a>\n",
+        "<a name=\"core-components\"></a>\n",
         "### Core components\n",
         "\n",
         "#### 1. PreProcessor: The data guardian\n",
@@ -247,7 +247,7 @@
         "This ensures each fold is truly independent, with its own feature encoding.\n",
         "\n",
         "\n",
-        "<a id=\"class-design-and-model-persistence\"></a>\n",
+        "<a name=\"class-design-and-model-persistence\"></a>\n",
         "### Class design and model persistence\n",
         "\n",
         "ATLAS is built for deployment, not just experimentation. Our encoders can easily be extended to each save their states:\n",
@@ -276,7 +276,7 @@
         "2. Load them in production\n",
         "3. Apply the exact same transformations to new data\n",
         "\n",
-        "<a id=\"system-workflow\"></a>\n",
+        "<a name=\"system-workflow\"></a>\n",
         "### System workflow\n",
         "\n",
         "Let's follow how ATLAS processes our housing data:\n",
@@ -320,7 +320,7 @@
         "   ```\n",
         "   This gives us comprehensive comparison results.\n",
         "\n",
-        "<a id=\"key-challenges-solved\"></a>\n",
+        "<a name=\"key-challenges-solved\"></a>\n",
         "### Key challenges solved\n",
         "\n",
         "The architecture of ATLAS directly addresses common machine learning challenges:\n",
@@ -359,10 +359,10 @@
         "id": "I_BHS1Hk805K"
       },
       "source": [
-        "<a id=\"atlas-implementation\"></a>\n",
+        "<a name=\"atlas-implementation\"></a>\n",
         "## ATLAS implementation\n",
         "\n",
-        "<a id=\"required-libraries\"></a>\n",
+        "<a name=\"required-libraries\"></a>\n",
         "### Required libraries\n",
         "\n",
         "We'll use the following libraries to compare our decision trees - keeping it simple:\n",
@@ -453,7 +453,7 @@
         "id": "jAFPBAZT805L"
       },
       "source": [
-        "<a id=\"data-loading-validation-and-featureset-dataclass\"></a>\n",
+        "<a name=\"data-loading-validation-and-featureset-dataclass\"></a>\n",
         "### Data loading, validation and FeatureSet dataclass implementation"
       ]
     },
@@ -501,7 +501,7 @@
             ],
             "text/html": [
               "\n",
-              "  <div id=\"df-3fddffab-ab33-458e-9cc3-0819c6968bca\" class=\"colab-df-container\">\n",
+              "  <div name=\"df-3fddffab-ab33-458e-9cc3-0819c6968bca\" class=\"colab-df-container\">\n",
               "    <div>\n",
               "<style scoped>\n",
               "    .dataframe tbody tr th:only-of-type {\n",
@@ -669,7 +669,7 @@
               "  </div>\n",
               "\n",
               "\n",
-              "<div id=\"df-88dc458d-5f8a-4956-8a72-ad17fd393e3c\">\n",
+              "<div name=\"df-88dc458d-5f8a-4956-8a72-ad17fd393e3c\">\n",
               "  <button class=\"colab-df-quickchart\" onclick=\"quickchart('df-88dc458d-5f8a-4956-8a72-ad17fd393e3c')\"\n",
               "            title=\"Suggest charts\"\n",
               "            style=\"display:none;\">\n",
@@ -862,7 +862,7 @@
         "id": "J05xrGxJ805M"
       },
       "source": [
-        "<a id=\"preprocessor\"></a>\n",
+        "<a name=\"preprocessor\"></a>\n",
         "### PreProcessor\n",
         "\n",
         "Building on Lesson 2B's exploration of model evaluation, we learned that proper model evaluation requires careful data splitting. Since house prices follow a highly skewed distribution, we need to ensure our train and test sets have similar price distributions.\n",
@@ -936,7 +936,7 @@
         "id": "jx7oz61e805N"
       },
       "source": [
-        "<a id=\"featureencoder-encoderstate-and-persistence\"></a>\n",
+        "<a name=\"featureencoder-encoderstate-and-persistence\"></a>\n",
         "### FeatureEncoder, EncoderState and persistence\n",
         "\n",
         "Our FeatureEncoder solves several core challenges in house price prediction:\n",
@@ -2105,7 +2105,7 @@
         "id": "8Z9x_-Ev805O"
       },
       "source": [
-        "<a id=\"crossvalidator\"></a>\n",
+        "<a name=\"crossvalidator\"></a>\n",
         "### CrossValidator\n",
         "\n",
         "The CrossValidator class serves as the experimental engine of ATLAS, systematically evaluating different models and feature combinations to identify the most effective approaches for house price prediction.\n",
@@ -2425,7 +2425,7 @@
         "id": "9Z9sRfPA805P"
       },
       "source": [
-        "<a id=\"running-atlas\"></a>\n",
+        "<a name=\"running-atlas\"></a>\n",
         "## Running ATLAS\n",
         "\n",
         "ATLAS processes our house price data through a straightforward sequence:\n",
@@ -2878,12 +2878,12 @@
         "id": "znHR3cx9805P"
       },
       "source": [
-        "<a id=\"unveiling-the-drivers-of-london-house-prices\"></a>\n",
+        "<a name=\"unveiling-the-drivers-of-london-house-prices\"></a>\n",
         "## Unveiling the drivers of London house prices\n",
         "\n",
         "Our exploration of London house price prediction, guided by the ATLAS pipeline, has yielded a wealth of insights. By systematically comparing a diverse set of models and feature combinations, we've gained a nuanced understanding of the key drivers of property value in this complex market. This analysis will delve into the performance of our top models, the impact of including price information, the effectiveness of our feature engineering techniques, and the implications of our findings for both model deployment and further research.\n",
         "\n",
-        "<a id=\"top-performing-models\"></a>\n",
+        "<a name=\"top-performing-models\"></a>\n",
         "### Top performing models\n",
         "\n",
         "Among the myriad of models evaluated, three have distinguished themselves with their exceptional performance:\n",
@@ -2898,7 +2898,7 @@
         "\n",
         "The strong and consistent performance of these models across both cross-validation and the test set is a testament to the robustness of our modeling approach. It suggests that these models have successfully captured the underlying patterns and relationships in the data, rather than simply memorising noise or idiosyncrasies of the training set.\n",
         "\n",
-        "<a id=\"the-price-information-paradox\"></a>\n",
+        "<a name=\"the-price-information-paradox\"></a>\n",
         "### The price information paradox\n",
         "\n",
         "One of the most striking findings from our experiments is the significant impact of including price-derived features, such as the average price per square foot at the outcode level. Models that incorporate this information consistently outperform those that don't, with improvements in MAE ranging from £40,000 to £50,000.\n",
@@ -2909,7 +2909,7 @@
         "\n",
         "This is a well-known challenge in the real estate industry, and one that major players like Zoopla and Rightmove actively monitor and manage. It highlights the importance of considering not just the accuracy of our models, but also their potential impact on the market they seek to predict.\n",
         "\n",
-        "<a id=\"models-without-price-information\"></a>\n",
+        "<a name=\"models-without-price-information\"></a>\n",
         "### Models without price information\n",
         "\n",
         "Given the potential risks associated with including current price information, it's worth examining the performance of models that rely solely on fundamental property characteristics and location.\n",
@@ -2926,7 +2926,7 @@
         "\n",
         "These models provide a valuable perspective on the fundamental drivers of house prices, independent of current market conditions. They can help identify areas or property types that may be over- or under-valued relative to their inherent attributes. In practice, such models could be used in conjunction with price-aware models to provide a more comprehensive view of a property's value.\n",
         "\n",
-        "<a id=\"the-importance-of-validation\"></a>\n",
+        "<a name=\"the-importance-of-validation\"></a>\n",
         "### The importance of validation\n",
         "\n",
         "A crucial aspect of our modeling process that deserves highlighting is the rigor of our validation strategy. By employing stratified k-fold cross-validation, we ensure that our performance estimates are reliable and representative of the models' true predictive power.\n",
@@ -2941,7 +2941,7 @@
         "\n",
         "Our models' strong and consistent performance across the cross-validation folds and on the unseen test set demonstrates that they have successfully learned genuine patterns in the data and can generalise well to new, unseen properties. This is crucial for real-world application, where the model will be applied to properties it has never seen before.\n",
         "\n",
-        "<a id=\"feature-engineering-the-art-of-extracting-signal-from-the-noise\"></a>\n",
+        "<a name=\"feature-engineering-the-art-of-extracting-signal-from-the-noise\"></a>\n",
         "### Feature engineering: The art of extracting signal from the noise\n",
         "\n",
         "Another key lesson from our analysis is the importance and nuance of feature engineering, particularly when dealing with geographical data.\n",
@@ -2960,7 +2960,7 @@
         "Beyond geographical features, our experiments also highlighted the predictive power of even simple property attributes like area, number of bedrooms, and property type. Models using just these features achieved respectable performance, forming a strong baseline upon which more complex models could improve.\n",
         "\n",
         "\n",
-        "<a id=\"ethical-considerations-human-impact-and-future-directions\"></a>\n",
+        "<a name=\"ethical-considerations-human-impact-and-future-directions\"></a>\n",
         "### Ethical considerations, human impact, and future directions\n",
         "\n",
         "As we marvel at the predictive power of our models, it's crucial that we also pause to consider the ethical implications of our work. Housing is not just a financial asset, but a fundamental human need. The prices predicted by our models have real consequences for real people - they can determine whether a family can afford to buy their dream home, whether a pensioner can comfortably retire, or whether a young professional can afford to live near their work.\n",
