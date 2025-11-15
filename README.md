@@ -40,8 +40,13 @@ Automated Tree Learning Analysis System (ATLAS) for feature engineering and mode
 * [View Source](notebooks/2c_decision_trees_ATLAS_model_comparison.ipynb)
 
 
-### 🧠 Neural Networks (Coming Soon)
-Implementation of neural networks and deep learning fundamentals.
+### 3a_neural_networks_theory.ipynb
+Theory & from-scratch implementation of neural networks using forward and backpropagation on MNIST digits.
+* [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/powell-clark/supervised-machine-learning/blob/main/notebooks/3a_neural_networks_theory.ipynb)
+* [View Source](notebooks/3a_neural_networks_theory.ipynb)
+
+### 🧠 3b_neural_networks_practical.ipynb (Coming Soon)
+Production-grade PyTorch implementation with modern deep learning techniques.
 
 ## 📊 Datasets
 
@@ -54,6 +59,11 @@ Implementation of neural networks and deep learning fundamentals.
 * Regression problem
 * 3,479 samples × 9 features
 * Geographic feature encoding
+
+### [MNIST Handwritten Digits (1998)](http://yann.lecun.com/exdb/mnist/)
+* Multi-class classification task
+* 70,000 samples (60k train, 10k test) × 784 features (28×28 pixels)
+* Handwritten digit recognition (0-9)
 
 ## 💻 Local Setup
 For those who prefer to run notebooks locally:
