@@ -9,61 +9,140 @@ This aims to be part of a broader machine learning series, with companion reposi
 ## 📚 Notebooks
 
 🚀 Quick Start:  Run notebooks directly in your browser - no setup required!
-1. Click any "Open in Colab" button below 
-2. In Colab: Click "Connect" (top-right) 
+1. Click any "Open in Colab" button below
+2. In Colab: Click "Connect" (top-right)
 3. Click "Runtime" > "Run all" (top menu)
 
+### Foundation
+**Lesson 0: Linear Regression** - The foundation of machine learning
 
-### 1a_logistic_regression_theory.ipynb  
-Theory & from-scratch implementation of logistic regression using the Wisconsin Breast Cancer dataset.
+#### 0a_linear_regression_theory.ipynb
+Theory & from-scratch implementation with Normal Equation and Gradient Descent.
+* [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/powell-clark/supervised-machine-learning/blob/main/notebooks/0a_linear_regression_theory.ipynb)
+* [View Source](notebooks/0a_linear_regression_theory.ipynb)
+
+#### 0b_linear_regression_practical.ipynb
+Production implementations with Scikit-learn, polynomial features, and Ridge/Lasso regularization.
+* [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/powell-clark/supervised-machine-learning/blob/main/notebooks/0b_linear_regression_practical.ipynb)
+* [View Source](notebooks/0b_linear_regression_practical.ipynb)
+
+---
+
+### Core Algorithms
+**Lesson 1: Logistic Regression** - Binary classification from first principles
+
+#### 1a_logistic_regression_theory.ipynb
+Theory & from-scratch implementation using the Wisconsin Breast Cancer dataset.
 * [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/powell-clark/supervised-machine-learning/blob/main/notebooks/1a_logistic_regression_theory.ipynb)
 * [View Source](notebooks/1a_logistic_regression_theory.ipynb)
 
-### 1b_logistic_regression_practical.ipynb
+#### 1b_logistic_regression_practical.ipynb
 Production-grade PyTorch implementation with modern ML engineering practices.
 * [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/powell-clark/supervised-machine-learning/blob/main/notebooks/1b_logistic_regression_practical.ipynb)
 * [View Source](notebooks/1b_logistic_regression_practical.ipynb)
 
-### 2a_decision_trees_theory.ipynb
-Deep dive into decision tree theory with a complete from-scratch implementation.
+**Lesson 2: Decision Trees & Ensembles** - From single trees to Random Forests and XGBoost
+
+#### 2a_decision_trees_theory.ipynb
+Deep dive into decision tree theory with complete from-scratch implementation.
 * [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/powell-clark/supervised-machine-learning/blob/main/notebooks/2a_decision_trees_theory.ipynb)
 * [View Source](notebooks/2a_decision_trees_theory.ipynb)
 
-### 2b_decision_trees_practical.ipynb
-Real-world prediction of London housing market prices with Scikit-learn, random forests and XGBoost.
+#### 2b_decision_trees_practical.ipynb
+Real-world London housing price prediction with Scikit-learn, Random Forests, and XGBoost.
 * [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/powell-clark/supervised-machine-learning/blob/main/notebooks/2b_decision_trees_practical.ipynb)
 * [View Source](notebooks/2b_decision_trees_practical.ipynb)
 
-### 2c_decision_trees_ATLAS_model_comparison.ipynb
+#### 2c_decision_trees_ATLAS_model_comparison.ipynb
 Automated Tree Learning Analysis System (ATLAS) for feature engineering and model comparison.
 * [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/powell-clark/supervised-machine-learning/blob/main/notebooks/2c_decision_trees_ATLAS_model_comparison.ipynb)
 * [View Source](notebooks/2c_decision_trees_ATLAS_model_comparison.ipynb)
 
+**Lesson 3: Neural Networks** - Deep learning from backpropagation to production PyTorch
 
-### 3a_neural_networks_theory.ipynb
-Theory & from-scratch implementation of neural networks using forward and backpropagation on MNIST digits.
+#### 3a_neural_networks_theory.ipynb
+Theory & from-scratch implementation with forward and backpropagation on MNIST digits.
 * [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/powell-clark/supervised-machine-learning/blob/main/notebooks/3a_neural_networks_theory.ipynb)
 * [View Source](notebooks/3a_neural_networks_theory.ipynb)
 
-### 🧠 3b_neural_networks_practical.ipynb (Coming Soon)
-Production-grade PyTorch implementation with modern deep learning techniques.
+#### 3b_neural_networks_practical.ipynb
+Production PyTorch: modern optimizers, regularization, deeper architectures, GPU acceleration.
+* [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/powell-clark/supervised-machine-learning/blob/main/notebooks/3b_neural_networks_practical.ipynb)
+* [View Source](notebooks/3b_neural_networks_practical.ipynb)
+
+**Lesson 4: Support Vector Machines** - Maximum margin classification with kernels
+
+#### 4a_svm_theory.ipynb
+Maximum margin theory, support vectors, kernel trick, and from-scratch implementation.
+* [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/powell-clark/supervised-machine-learning/blob/main/notebooks/4a_svm_theory.ipynb)
+* [View Source](notebooks/4a_svm_theory.ipynb)
+
+#### 4b_svm_practical.ipynb
+Scikit-learn SVM with kernel comparison and hyperparameter tuning.
+* [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/powell-clark/supervised-machine-learning/blob/main/notebooks/4b_svm_practical.ipynb)
+* [View Source](notebooks/4b_svm_practical.ipynb)
+
+**Lesson 5: K-Nearest Neighbors** - Instance-based learning and distance metrics
+
+#### 5a_knn_theory.ipynb
+Distance metrics, choosing K, curse of dimensionality, and from-scratch implementation.
+* [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/powell-clark/supervised-machine-learning/blob/main/notebooks/5a_knn_theory.ipynb)
+* [View Source](notebooks/5a_knn_theory.ipynb)
+
+#### 5b_knn_practical.ipynb
+Optimized KNN with scikit-learn, finding optimal K, and algorithm comparison.
+* [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/powell-clark/supervised-machine-learning/blob/main/notebooks/5b_knn_practical.ipynb)
+* [View Source](notebooks/5b_knn_practical.ipynb)
+
+**Lesson 6: Naive Bayes** - Probabilistic classification with Bayes' Theorem
+
+#### 6a_naive_bayes_theory.ipynb
+Bayes' Theorem, conditional independence, Gaussian/Multinomial variants, from-scratch implementation.
+* [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/powell-clark/supervised-machine-learning/blob/main/notebooks/6a_naive_bayes_theory.ipynb)
+* [View Source](notebooks/6a_naive_bayes_theory.ipynb)
+
+#### 6b_naive_bayes_practical.ipynb
+Text classification with scikit-learn, CountVectorizer/TF-IDF, and 20 Newsgroups dataset.
+* [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/powell-clark/supervised-machine-learning/blob/main/notebooks/6b_naive_bayes_practical.ipynb)
+* [View Source](notebooks/6b_naive_bayes_practical.ipynb)
 
 ## 📊 Datasets
+
+### [California Housing (1990)](https://scikit-learn.org/stable/datasets/real_world.html#california-housing-dataset)
+* Regression problem
+* 20,640 samples × 8 features
+* Predicting median house values
+* **Used in:** Lesson 0 (Linear Regression)
 
 ### [Wisconsin Breast Cancer (1995)](https://archive.ics.uci.edu/dataset/17/breast+cancer+wisconsin+diagnostic)
 * Binary classification task
 * 569 samples × 30 features
 * Medical diagnosis application
+* **Used in:** Lessons 1 (Logistic Regression), 4 (SVM), 5 (KNN), 6 (Naive Bayes)
+
+### [Iris (1936)](https://scikit-learn.org/stable/datasets/toy_dataset.html#iris-dataset)
+* Multi-class classification (3 classes)
+* 150 samples × 4 features
+* Classic ML dataset
+* **Used in:** Lesson 5 (KNN)
 
 ### [London Housing Prices (2020)](https://www.kaggle.com/datasets/arnavkulkarni/housing-prices-in-london)
 * Regression problem
 * 3,479 samples × 9 features
 * Geographic feature encoding
+* **Used in:** Lesson 2 (Decision Trees)
 
 ### [MNIST Handwritten Digits (1998)](http://yann.lecun.com/exdb/mnist/)
-* Multi-class classification task
+* Multi-class classification (10 classes)
 * 70,000 samples (60k train, 10k test) × 784 features (28×28 pixels)
 * Handwritten digit recognition (0-9)
+* **Used in:** Lesson 3 (Neural Networks)
+
+### [20 Newsgroups (1995)](http://qwone.com/~jason/20Newsgroups/)
+* Multi-class text classification (20 classes)
+* ~18,000 newsgroup documents
+* Natural language processing
+* **Used in:** Lesson 6 (Naive Bayes)
 
 ## 💻 Local Setup
 For those who prefer to run notebooks locally:

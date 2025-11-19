@@ -13,6 +13,10 @@ xgboost==1.7.9
 joblib==1.4.2
 tqdm==4.67.1
 
+# Deep Learning (Lesson 3b)
+torch>=2.0.0
+torchvision>=0.15.0
+
 # Jupyter and IPython related dependencies
 ipython==8.30.0  # For interactive Python sessions
 ipykernel==6.29.5  # To run the Python kernel in Jupyter
