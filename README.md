@@ -106,6 +106,55 @@ Text classification with scikit-learn, CountVectorizer/TF-IDF, and 20 Newsgroups
 * [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/powell-clark/supervised-machine-learning/blob/main/notebooks/6b_naive_bayes_practical.ipynb)
 * [View Source](notebooks/6b_naive_bayes_practical.ipynb)
 
+**Lesson 7: Ensemble Methods Mastery** - Advanced ensemble techniques
+
+#### 7a_ensemble_methods_theory.ipynb
+Bagging, boosting, stacking theory - why ensembles outperform single models.
+* [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/powell-clark/supervised-machine-learning/blob/main/notebooks/7a_ensemble_methods_theory.ipynb)
+* [View Source](notebooks/7a_ensemble_methods_theory.ipynb)
+
+#### 7b_ensemble_practical.ipynb
+XGBoost, LightGBM, stacking, and hyperparameter tuning for production.
+* [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/powell-clark/supervised-machine-learning/blob/main/notebooks/7b_ensemble_practical.ipynb)
+* [View Source](notebooks/7b_ensemble_practical.ipynb)
+
+**Lesson 8: Anomaly Detection** - Detecting outliers, fraud, and rare events
+
+#### 8a_anomaly_detection_theory.ipynb
+Statistical methods, Isolation Forest, One-Class SVM theory and applications.
+* [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/powell-clark/supervised-machine-learning/blob/main/notebooks/8a_anomaly_detection_theory.ipynb)
+* [View Source](notebooks/8a_anomaly_detection_theory.ipynb)
+
+#### 8b_anomaly_detection_practical.ipynb
+Production anomaly detection systems for fraud detection and monitoring.
+* [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/powell-clark/supervised-machine-learning/blob/main/notebooks/8b_anomaly_detection_practical.ipynb)
+* [View Source](notebooks/8b_anomaly_detection_practical.ipynb)
+
+---
+
+### Professional ML Practice (X-Series)
+**Cross-cutting skills that apply to all algorithms**
+
+#### X1_feature_engineering.ipynb
+Comprehensive guide: encoding, scaling, transformations, interaction features, time-based features.
+* [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/powell-clark/supervised-machine-learning/blob/main/notebooks/X1_feature_engineering.ipynb)
+* [View Source](notebooks/X1_feature_engineering.ipynb)
+
+#### X2_model_evaluation.ipynb
+Complete evaluation framework: metrics, cross-validation, ROC curves, statistical testing.
+* [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/powell-clark/supervised-machine-learning/blob/main/notebooks/X2_model_evaluation.ipynb)
+* [View Source](notebooks/X2_model_evaluation.ipynb)
+
+#### X3_hyperparameter_tuning.ipynb
+Grid search, random search, Bayesian optimization, and AutoML best practices.
+* [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/powell-clark/supervised-machine-learning/blob/main/notebooks/X3_hyperparameter_tuning.ipynb)
+* [View Source](notebooks/X3_hyperparameter_tuning.ipynb)
+
+#### X4_imbalanced_data.ipynb
+SMOTE, class weights, cost-sensitive learning for handling imbalanced datasets.
+* [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/powell-clark/supervised-machine-learning/blob/main/notebooks/X4_imbalanced_data.ipynb)
+* [View Source](notebooks/X4_imbalanced_data.ipynb)
+
 ## 📊 Datasets
 
 ### [California Housing (1990)](https://scikit-learn.org/stable/datasets/real_world.html#california-housing-dataset)

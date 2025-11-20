@@ -12,6 +12,7 @@ category-encoders==2.6.4
 xgboost==1.7.9
 joblib==1.4.2
 tqdm==4.67.1
+imbalanced-learn>=0.11.0  # For SMOTE and imbalanced data (X4)
 
 # Deep Learning (Lesson 3b)
 torch>=2.0.0
