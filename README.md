@@ -1,8 +1,18 @@
-# 🎓 Supervised Machine Learning
+# 🎓 Supervised Machine Learning: From First Principles to Transformers
 
-This repository teaches machine learning from first principles using Python. 
+**Complete machine learning curriculum from foundational mathematics to state-of-the-art Transformers.**
 
-Starting with foundational mathematics (derivatives, exp/log, probability), each notebook builds complete understanding before exploring modern tools like Scikit-learn and PyTorch. All mathematical concepts are derived step-by-step, making the content accessible to anyone with basic high school calculus knowledge. 
+This repository achieves **legendary 2025 status** by teaching machine learning comprehensively - from mathematical foundations through modern deep learning architectures (CNNs, RNNs, Transformers), with production-ready implementations, model interpretability, and ethical AI practices.
+
+Starting with foundational mathematics (derivatives, exp/log, probability), each notebook builds complete understanding before exploring modern tools like Scikit-learn, TensorFlow, PyTorch, and Hugging Face Transformers. All mathematical concepts are derived step-by-step, making the content accessible to anyone with basic high school calculus knowledge.
+
+**What makes this legendary:**
+- ✅ 9 classical ML algorithms with theory + practice
+- ✅ Modern deep learning: CNNs, RNNs, Transformers
+- ✅ Production best practices and MLOps
+- ✅ Model interpretability (SHAP, LIME)
+- ✅ Ethics, bias detection, and fairness
+- ✅ All with working code and full sentences
 
 This aims to be part of a broader machine learning series, with companion repositories for unsupervised, reinforcement and other state-of-the-art machine learning domains in development.
 
@@ -154,6 +164,40 @@ Grid search, random search, Bayesian optimization, and AutoML best practices.
 SMOTE, class weights, cost-sensitive learning for handling imbalanced datasets.
 * [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/powell-clark/supervised-machine-learning/blob/main/notebooks/X4_imbalanced_data.ipynb)
 * [View Source](notebooks/X4_imbalanced_data.ipynb)
+
+#### X5_interpretability_explainability.ipynb
+SHAP, LIME, permutation importance, partial dependence plots for model explainability and EU AI Act compliance.
+* [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/powell-clark/supervised-machine-learning/blob/main/notebooks/X5_interpretability_explainability.ipynb)
+* [View Source](notebooks/X5_interpretability_explainability.ipynb)
+
+#### X6_ethics_bias_detection.ipynb
+Fairness metrics, bias detection and mitigation, ethical frameworks, and responsible AI deployment.
+* [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/powell-clark/supervised-machine-learning/blob/main/notebooks/X6_ethics_bias_detection.ipynb)
+* [View Source](notebooks/X6_ethics_bias_detection.ipynb)
+
+---
+
+### Modern Deep Learning (Lesson 9)
+**State-of-the-art architectures for 2025 production systems**
+
+**Lesson 9: Advanced Deep Learning** - CNNs, RNNs, and Transformers
+
+#### 9a_cnns_transfer_learning.ipynb
+Convolutional Neural Networks, transfer learning with VGG/ResNet/MobileNet, data augmentation, and computer vision production best practices.
+* [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/powell-clark/supervised-machine-learning/blob/main/notebooks/9a_cnns_transfer_learning.ipynb)
+* [View Source](notebooks/9a_cnns_transfer_learning.ipynb)
+
+#### 9b_rnns_sequences.ipynb
+Recurrent Neural Networks, LSTM, GRU, bidirectional RNNs, sequence-to-sequence models, and time series forecasting.
+* [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/powell-clark/supervised-machine-learning/blob/main/notebooks/9b_rnns_sequences.ipynb)
+* [View Source](notebooks/9b_rnns_sequences.ipynb)
+
+#### 9c_transformers_attention.ipynb
+Transformers, attention mechanisms, BERT vs GPT, fine-tuning with Hugging Face, Vision Transformers, and state-of-the-art NLP.
+* [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/powell-clark/supervised-machine-learning/blob/main/notebooks/9c_transformers_attention.ipynb)
+* [View Source](notebooks/9c_transformers_attention.ipynb)
+
+---
 
 ## 📊 Datasets
 
