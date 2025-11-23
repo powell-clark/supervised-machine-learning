@@ -23,14 +23,9 @@ Requires calculus (derivatives), linear algebra (matrices, dot products), and pr
 **Lesson 0: Linear Regression** - The foundation of machine learning
 
 #### 0a_linear_regression_theory.ipynb
-Theory & from-scratch implementation with Normal Equation and Gradient Descent.
+Mathematical derivation of Normal Equation and Gradient Descent with NumPy implementation.
 * [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/powell-clark/supervised-machine-learning/blob/main/notebooks/0a_linear_regression_theory.ipynb)
 * [View Source](notebooks/0a_linear_regression_theory.ipynb)
-
-#### 0b_linear_regression_practical.ipynb
-Production implementations with Scikit-learn, polynomial features, and Ridge/Lasso regularization.
-* [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/powell-clark/supervised-machine-learning/blob/main/notebooks/0b_linear_regression_practical.ipynb)
-* [View Source](notebooks/0b_linear_regression_practical.ipynb)
 
 ---
 
@@ -67,14 +62,9 @@ Automated Tree Learning Analysis System (ATLAS) for feature engineering and mode
 **Lesson 3: Neural Networks** - Backpropagation and gradient-based learning
 
 #### 3a_neural_networks_theory.ipynb
-Theory & from-scratch implementation with forward pass, backpropagation derivation, and MNIST classification.
+Backpropagation derivation via chain rule, from-scratch NumPy implementation, MNIST classification.
 * [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/powell-clark/supervised-machine-learning/blob/main/notebooks/3a_neural_networks_theory.ipynb)
 * [View Source](notebooks/3a_neural_networks_theory.ipynb)
-
-#### 3b_neural_networks_practical.ipynb
-Production PyTorch: Adam optimizer, batch normalization, dropout, learning rate schedules.
-* [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/powell-clark/supervised-machine-learning/blob/main/notebooks/3b_neural_networks_practical.ipynb)
-* [View Source](notebooks/3b_neural_networks_practical.ipynb)
 
 ---
 
