@@ -1,0 +1,13 @@
+{
+  "session_id": "unknown",
+  "date": "2025-11-23T00:17:35.040312",
+  "branch": "review",
+  "duration_minutes": 0,
+  "speed": {},
+  "value": {
+    "tasks_completed": 0
+  },
+  "cost": {
+    "commits": 4
+  }
+}
