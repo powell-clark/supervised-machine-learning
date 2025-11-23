@@ -1,20 +1,17 @@
 # 🎓 Supervised Machine Learning: From First Principles to Transformers
 
-**Complete machine learning curriculum from foundational mathematics to state-of-the-art Transformers.**
+This repository teaches machine learning from mathematical foundations through modern deep learning.
 
-This repository achieves **legendary 2025 status** by teaching machine learning comprehensively - from mathematical foundations through modern deep learning architectures (CNNs, RNNs, Transformers), with production-ready implementations, model interpretability, and ethical AI practices.
+Starting with derivatives, logarithms, and probability, each notebook builds understanding step-by-step using Python, NumPy, and production tools (Scikit-learn, PyTorch, TensorFlow). You'll implement algorithms from scratch to understand them deeply, then use industry-standard libraries for practical work.
 
-Starting with foundational mathematics (derivatives, exp/log, probability), each notebook builds complete understanding before exploring modern tools like Scikit-learn, TensorFlow, PyTorch, and Hugging Face Transformers. All mathematical concepts are derived step-by-step, making the content accessible to anyone with basic high school calculus knowledge.
+**What's covered:**
+- 9 classical algorithms (linear regression → anomaly detection)
+- Modern deep learning (CNNs, RNNs, Transformers)
+- Production practices (hyperparameter tuning, model evaluation)
+- Model interpretability (SHAP, LIME)
+- Ethics and bias detection
 
-**What makes this legendary:**
-- ✅ 9 classical ML algorithms with theory + practice
-- ✅ Modern deep learning: CNNs, RNNs, Transformers
-- ✅ Production best practices and MLOps
-- ✅ Model interpretability (SHAP, LIME)
-- ✅ Ethics, bias detection, and fairness
-- ✅ All with working code and full sentences
-
-This aims to be part of a broader machine learning series, with companion repositories for unsupervised, reinforcement and other state-of-the-art machine learning domains in development.
+Assumes basic high school calculus. Companion repositories for unsupervised and reinforcement learning in development.
 
 ## 📚 Notebooks
 
@@ -146,7 +143,7 @@ Production anomaly detection systems for fraud detection and monitoring.
 **Cross-cutting skills that apply to all algorithms**
 
 #### X1_feature_engineering.ipynb
-Comprehensive guide: encoding, scaling, transformations, interaction features, time-based features.
+Encoding, scaling, transformations, interaction features, time-based features.
 * [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/powell-clark/supervised-machine-learning/blob/main/notebooks/X1_feature_engineering.ipynb)
 * [View Source](notebooks/X1_feature_engineering.ipynb)
 
@@ -178,7 +175,7 @@ Fairness metrics, bias detection and mitigation, ethical frameworks, and respons
 ---
 
 ### Modern Deep Learning (Lesson 9)
-**State-of-the-art architectures for 2025 production systems**
+**CNNs, RNNs, and Transformers**
 
 **Lesson 9: Advanced Deep Learning** - CNNs, RNNs, and Transformers
 
@@ -193,7 +190,7 @@ Recurrent Neural Networks, LSTM, GRU, bidirectional RNNs, sequence-to-sequence m
 * [View Source](notebooks/9b_rnns_sequences.ipynb)
 
 #### 9c_transformers_attention.ipynb
-Transformers, attention mechanisms, BERT vs GPT, fine-tuning with Hugging Face, Vision Transformers, and state-of-the-art NLP.
+Transformers, attention mechanisms, BERT vs GPT, fine-tuning with Hugging Face, and Vision Transformers.
 * [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/powell-clark/supervised-machine-learning/blob/main/notebooks/9c_transformers_attention.ipynb)
 * [View Source](notebooks/9c_transformers_attention.ipynb)
 
