@@ -1,0 +1,11 @@
+blank_issues_enabled: true
+contact_links:
+  - name: 💬 Ask a Question
+    url: https://github.com/powell-clark/supervised-machine-learning/discussions
+    about: Ask questions about the curriculum or development
+  - name: 📖 Development Guide
+    url: https://github.com/powell-clark/supervised-machine-learning/blob/main/DEVELOPMENT_GUIDE.md
+    about: Read the development guide before contributing
+  - name: ✅ Quality Checklist
+    url: https://github.com/powell-clark/supervised-machine-learning/blob/main/LESSON_QUALITY_CHECKLIST.md
+    about: Use this checklist while developing lessons
